@@ -112,14 +112,8 @@ const SPORTS_DATA = {
     ],
     fixtures: [],
     gallery: [
-      { url: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80", caption: "Match Atmosphere & Ground Under Lights" },
-      { url: "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=800&q=80", caption: "Willow, Helmets & Match Gear" },
-      { url: "https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&w=800&q=80", caption: "Cricket Ball on Match Pitch" },
-      { url: "https://images.unsplash.com/photo-1512719994953-eabf50895df7?auto=format&fit=crop&w=800&q=80", caption: "Wickets, Stumps & Bowling Delivery" }
-    ],
-    registrationOptions: [
-      { label: "Player Registration (₹30/-)", link: "https://forms.gle/vFGws841EdGm7BzeA" },
-      { label: "Team Registration", link: "https://docs.google.com/forms/d/e/1FAIpQLSdGd6f0-0DmU0b4I-AemjF4FZ8zyDGuzF7zvcmJFcPFV0T-ow/viewform?usp=header" }
+      { url: "assets/images/real-football-team.jpg", caption: "IIIT Vadodara Football Squad & Team Lineup" },
+      { url: "assets/images/real-trophy-winner.jpg", caption: "Championship Trophy Celebration Under Lights" }
     ],
     coordinators: [
       { name: "Abhishek Biban", role: "Secretary", phone: "7627037197" },
@@ -135,7 +129,7 @@ const SPORTS_DATA = {
     category: "Track & Field",
     icon: "🏃",
     color: "#ef4444", // Crimson red
-    heroImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/real-champions-team.jpg",
     venue: "CRPF Ground (Athletics) & Institute Premises (Tug of War)",
     dates: "College Days & Fest Weekend",
     timings: "Scheduled Slots Announced on WhatsApp",
@@ -170,6 +164,10 @@ const SPORTS_DATA = {
       { date: "Fest Weekend", time: "Evening Slots", stage: "Tug of War & Athletics Finals Showdown", court: "CRPF Ground / Campus", status: "upcoming" }
     ],
     fixtures: [],
+    gallery: [
+      { url: "assets/images/real-champions-team.jpg", caption: "IIIT Vadodara Champions with Trophies" },
+      { url: "assets/images/real-trophy-winner.jpg", caption: "Gold Trophy Champion Celebration on Field" }
+    ],
     coordinators: [
       { name: "Sarthak", role: "Secretary (Sec)", phone: "+91 74094 02485", email: "sports.committee@iiitvadodara.ac.in" },
       { name: "Yash", role: "Joint Secretary (Jsec)", phone: "+91 81808 74428", email: "sports.committee@iiitvadodara.ac.in" }
@@ -184,7 +182,7 @@ const SPORTS_DATA = {
     category: "Team Sport",
     icon: "⚽",
     color: "#10b981", // Emerald green
-    heroImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/real-football-team.jpg",
     venue: "CRPF Ground (25 Oct) & IIT Ground (01 Nov)",
     dates: "25th October & 1st November 2026",
     timings: "25 Oct: 08:00 AM–12:00 PM & 02:00 PM–06:00 PM | 01 Nov: 04:30 PM–09:00 PM",
@@ -238,7 +236,7 @@ const SPORTS_DATA = {
     category: "Team Sport",
     icon: "🏐",
     color: "#06b6d4",
-    heroImage: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/real-trophy-winner.jpg",
     venue: "College Ground",
     dates: "19th October to 6th November",
     timings: "During lunch hours",
@@ -270,6 +268,10 @@ const SPORTS_DATA = {
       { date: "06 Nov", time: "Lunch Hours", stage: "Volleyball Championship Grand Final (Best of 5 sets: 21-21-21-21-25)", court: "College Ground", status: "upcoming" }
     ],
     fixtures: [],
+    gallery: [
+      { url: "assets/images/real-trophy-winner.jpg", caption: "Ventura Championship Trophy Winner" },
+      { url: "assets/images/real-champions-team.jpg", caption: "IIIT Vadodara Winners with Trophies" }
+    ],
     coordinators: [
       { name: "Aditya", role: "Secretary", phone: "9571734643", email: "sports.committee@iiitvadodara.ac.in" },
       { name: "Anshu", role: "Joint Secretary", phone: "8306724203", email: "sports.committee@iiitvadodara.ac.in" }
@@ -324,7 +326,7 @@ const SPORTS_DATA = {
     category: "Board Sport",
     icon: "🎯",
     color: "#ec4899", // Rose / pink
-    heroImage: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/real-carrom.jpg",
     venue: "Institute Premises",
     dates: "From 20th Oct",
     timings: "01:00 PM – 03:00 PM",
@@ -357,6 +359,10 @@ const SPORTS_DATA = {
       { date: "Finals Day", time: "01:00 PM - 03:00 PM", stage: "Carrom Championship Grand Finals (Best of 5 Boards)", court: "Institute Premises", status: "upcoming" }
     ],
     fixtures: [],
+    gallery: [
+      { url: "assets/images/real-carrom.jpg", caption: "Inter-Batch Carrom Tournament Matchplay" },
+      { url: "assets/images/real-trophy-winner.jpg", caption: "Ventura Trophy Celebration" }
+    ],
     coordinators: [
       { name: "Harshit Dhaker", role: "Secretary", phone: "8619459354", email: "202451073@iiitvadodara.ac.in" },
       { name: "Aashu Raj", role: "Joint Secretary (Jsec)", phone: "9142879660", email: "20251501003@iiitvadodara.ac.in" }
@@ -371,7 +377,7 @@ const SPORTS_DATA = {
     category: "Racquet Sport",
     icon: "🏓",
     color: "#14b8a6", // Teal
-    heroImage: "https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/real-table-tennis.jpg",
     venue: "College Premises (8 AM - 6 PM) & Hostel (8 PM - 11 PM)",
     dates: "20 Oct to 6 Nov",
     timings: "8:00 AM – 6:00 PM in College | 8:00 PM – 11:00 PM in Hostel",
@@ -397,6 +403,10 @@ const SPORTS_DATA = {
       { date: "06 Nov", time: "Evening Slots", stage: "Singles & Doubles Grand Finals", court: "College TT Arena", status: "upcoming" }
     ],
     fixtures: [],
+    gallery: [
+      { url: "assets/images/real-table-tennis.jpg", caption: "Table Tennis Matchplay at Campus Arena" },
+      { url: "assets/images/real-champions-team.jpg", caption: "IIIT Vadodara Championship Team" }
+    ],
     coordinators: [
       { name: "Bhavya Prajapati", role: "Secretary (Sec)", phone: "+91 83294 55093", email: "202451033@iiitvadodara.ac.in" },
       { name: "Akshat Chhabra", role: "Joint Secretary (Jsec)", phone: "+91 70503 57190", email: "20251504007@iiitvadodara.ac.in" }
