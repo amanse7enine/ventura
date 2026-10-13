@@ -33,7 +33,6 @@ const SPORTS_DATA = {
     gallery: [
       { url: "assets/images/badminton-smash.jpg", caption: "Explosive Jump Smash on Indoor Wooden Court" },
       { url: "assets/images/badminton-shuttle.jpg", caption: "Tournament Shuttlecock & Professional Racquet Strings" },
-      { url: "assets/images/badminton-rally.jpg", caption: "High-Speed Reflexes & Backhand Return" },
       { url: "assets/images/badminton-match.jpg", caption: "Competitive Indoor Arena Matchplay Under Lights" }
     ],
     venue: "Aloka Sports Academy",
