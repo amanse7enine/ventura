@@ -15,7 +15,7 @@ const sports = [
 ];
 
 // Default placeholder base URL for pre-generated images
-const defaultBaseUrl = 'https://iiitv-ventura.web.app';
+const defaultBaseUrl = 'https://ventura2k26-five.vercel.app';
 
 async function generateQRCodes() {
   const qrDir = path.join(__dirname, '..', 'assets', 'images', 'qr');

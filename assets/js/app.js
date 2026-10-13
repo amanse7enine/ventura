@@ -74,8 +74,8 @@ function openSportQRModal(sportId) {
   modalDownloadBtn.setAttribute('download', `${sportId}-ventura-qr.png`);
   
   if (modalSportLink) {
-    const currentOrigin = window.location.origin;
-    const directUrl = `${currentOrigin}/${sport.slug}`;
+    const isLocal = window.location.protocol === 'file:' || window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1');
+    const directUrl = isLocal ? 'https://ventura2k26-five.vercel.app/' + sport.slug : window.location.origin + '/' + sport.slug;
     modalSportLink.value = directUrl;
   }
 
@@ -98,33 +98,7 @@ function initPrintHandlers() {
  * Dynamic domain updater on the QR Hub page
  */
 function initDynamicDomainUpdater() {
-  const domainInput = document.getElementById('customDomainInput');
-  const updateBtn = document.getElementById('updateDomainBtn');
-
-  if (!domainInput || !updateBtn) return;
-
-  // Auto-fill current domain if running on live host
-  if (window.location.protocol.startsWith('http')) {
-    domainInput.value = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
-  }
-
-  updateBtn.addEventListener('click', () => {
-    const base = domainInput.value.trim().replace(/\/$/, '');
-    if (!base) return;
-
-    document.querySelectorAll('[data-sport-qr-target]').forEach(elem => {
-      const sportSlug = elem.getAttribute('data-sport-qr-target');
-      const fullUrl = `${base}/${sportSlug}`;
-      const urlDisplay = elem.querySelector('.qr-display-url');
-      if (urlDisplay) urlDisplay.innerText = fullUrl;
-      
-      // Update quick link
-      const openLink = elem.querySelector('.qr-open-link');
-      if (openLink) openLink.href = fullUrl;
-    });
-
-    alert('QR links updated for base: ' + base);
-  });
+  // Domain is permanently locked to https://ventura2k26-five.vercel.app
 }
 
 /**

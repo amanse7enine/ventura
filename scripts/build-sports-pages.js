@@ -401,7 +401,7 @@ function generateSportPage(sport) {
           </div>
 
           <div style="font-family: monospace; font-size: 0.75rem; color: #475569; background: #f1f5f9; padding: 6px; border-radius: 6px; margin-bottom: 1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-            https://iiitv-ventura.web.app/${sport.slug}
+            https://ventura2k26-five.vercel.app/${sport.slug}
           </div>
 
           <div class="qr-actions">
