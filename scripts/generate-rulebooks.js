@@ -232,7 +232,7 @@ const badmintonHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ventura 2024-25 - Official Badminton Rulebook | IIIT Vadodara</title>
+  <title>Ventura 2026-27 - Official Badminton Rulebook | IIIT Vadodara</title>
   <style>
     @page { size: A4; margin: 16mm 14mm; }
     * { box-sizing: border-box; }
@@ -327,7 +327,7 @@ const badmintonHtml = `<!DOCTYPE html>
   <div class="header">
     <div class="header-title">
       <h1>🏸 BADMINTON TOURNAMENT — OFFICIAL RULEBOOK</h1>
-      <p>VENTURA 2024-25 • INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA</p>
+      <p>VENTURA 2026-27 • INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA</p>
     </div>
     <div class="badge">OFFICIAL & FINAL</div>
   </div>

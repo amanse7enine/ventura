@@ -5,10 +5,10 @@
  */
 
 const VENTURA_CONFIG = {
-  eventName: "VENTURA 2024-25",
+  eventName: "VENTURA 2026-27",
   institution: "Indian Institute of Information Technology Vadodara",
   tagline: "Ignite the Spirit, Claim the Glory",
-  dates: "October - November 2024",
+  dates: "October - November 2026",
   venue: "IIIT Vadodara Sports Grounds & Hostels",
   defaultRegistrationForm: "#",
   contactHelpdesk: "sports.committee@iiitvadodara.ac.in",

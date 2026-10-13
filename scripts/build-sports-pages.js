@@ -208,7 +208,7 @@ function generateSportPage(sport) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${sport.name} | VENTURA 2024-25 | IIIT Vadodara</title>
+  <title>${sport.name} | VENTURA 2026-27 | IIIT Vadodara</title>
   <meta name="description" content="Official schedule, live fixtures, rules, registration and poster QR code for ${sport.name} at Ventura - IIIT Vadodara Annual Sports Event.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>${sport.icon}</text></svg>">
@@ -250,7 +250,7 @@ function generateSportPage(sport) {
       <div class="sport-hero-content">
         <div class="sport-title-block">
           <div class="hero-pill" style="border-color: ${sport.color}; color: #fff; background: rgba(255,255,255,0.06);">
-            <span>${sport.icon}</span> ${sport.category} • Ventura 2024-25
+            <span>${sport.icon}</span> ${sport.category} • Ventura 2026-27
           </div>
           <h1>${sport.name} Championship</h1>
           <p class="sport-tagline">${sport.tagline}</p>
@@ -424,7 +424,7 @@ function generateSportPage(sport) {
         <div class="card-box" style="margin-top: 2rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 8px;">
             <h3 style="margin: 0;"><span>📸</span> ${sport.name} Action Highlights (4 Photos)</h3>
-            <span style="font-size: 0.8rem; color: var(--accent-orange); font-weight: 600;">Ventura 2024-25</span>
+            <span style="font-size: 0.8rem; color: var(--accent-orange); font-weight: 600;">Ventura 2026-27</span>
           </div>
           <div class="gallery-grid">
             ${sport.gallery.map(g => `
@@ -489,7 +489,7 @@ function generateSportPage(sport) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h4>VENTURA 2024-25</h4>
+          <h4>VENTURA 2026-27</h4>
           <p>Official ${sport.name} Championship page. Indian Institute of Information Technology Vadodara (IIITV).</p>
           <div style="margin-top: 0.75rem; font-size: 0.84rem; color: var(--text-muted);">
             <div><strong>Sports Committee Sec:</strong> Aman (📞 <a href="tel:8318567785" style="color: #38bdf8;">8318567785</a>)</div>
@@ -509,7 +509,7 @@ function generateSportPage(sport) {
       </div>
 
       <div class="footer-bottom">
-        <p>© 2024–2025 IIIT Vadodara Sports Council. Each sport page has a dedicated QR code for instant mobile access.</p>
+        <p>© 2026–2027 IIIT Vadodara Sports Council. Each sport page has a dedicated QR code for instant mobile access.</p>
       </div>
     </div>
   </footer>
