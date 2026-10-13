@@ -39,6 +39,56 @@ function generateSportPage(sport) {
   }).join('\n');
 
   
+  const footballTournamentCard = sport.id === 'football' ? `
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md);">
+              <h4 style="color: #10b981; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>⚡</span> 11-A-Side Tournament & Playoff Format (8 Teams)
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                8 Teams divided into Group A & Group B. 11 on field (squad 13-15). Top 2 from each group advance to Semi-Finals.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: #fff; font-size: 0.88rem;">1. Group Stage (20 Min Halves)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 25 Oct at CRPF Ground.<br>• 2 matches per team; Win=3, Draw=1, Loss=0.<br>• Tie-break: GD > Goals Scored > Head-to-Head.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: #fff; font-size: 0.88rem;">2. Semi-Finals (20 Min Halves)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 1 Nov at IIT Ground.<br>• SF 1: Group A 1st vs Group B 2nd.<br>• SF 2: Group B 1st vs Group A 2nd.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f59e0b;">
+                  <strong style="color: #fff; font-size: 0.88rem;">3. Grand Final (25 Min Halves)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 1 Nov at IIT Ground.<br>• Tied knockout: Penalty shootout (5 kicks + sudden death).<br>• Winner & Runner-up Trophies awarded.</p>
+                </div>
+              </div>
+            </div>
+  ` : '';
+
+  const athleticsTournamentCard = sport.id === 'athletics' ? `
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: var(--radius-md);">
+              <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>⚡</span> Tug of War & Athletics Competition Structure
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Official 2-Pool Tug of War League & CRPF Ground Track Timings.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
+                  <strong style="color: #fff; font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• 2 Pools (Separate for Boys & Girls).<br>• 5 Players per team.<br>• Pool matches & Finals: <strong>Best of 3 pulls</strong>.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
+                  <strong style="color: #fff; font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Venue: CRPF Ground.<br>• Conducted in timing slots.<br>• Winner decided by top recorded timings.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: #fff; font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• ₹20/individual, ₹80/relay, ₹100/tug of war.<br>• Tug of War: Top 2 from each pool advance to SF (A1 vs B2, B1 vs A2).<br>• Sports outfit mandatory.</p>
+                </div>
+              </div>
+            </div>
+  ` : '';
+
   const cricketPlayoffCard = sport.id === 'cricket' ? `
             <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md);">
               <h4 style="color: #f59e0b; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
@@ -288,6 +338,8 @@ function generateSportPage(sport) {
               ${rulesList}
             </ul>
             ${cricketPlayoffCard}
+            ${footballTournamentCard}
+            ${athleticsTournamentCard}
             ${volleyballPlayoffCard}
             ${carromMatchCard}
 

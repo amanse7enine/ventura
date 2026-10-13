@@ -129,40 +129,45 @@ const SPORTS_DATA = {
 
   athletics: {
     id: "athletics",
-    name: "Athletics & Gym",
+    name: "Athletics & Tug of War",
     slug: "athletics.html",
-    tagline: "Track & Field, Gym Powerlifting & Tug of War Championship",
-    category: "Track, Field & Gym",
+    tagline: "Track & Field Sprints, Relays & Inter-Pool Tug of War (Best of 3 Pulls)",
+    category: "Track & Field",
     icon: "🏃",
-    color: "#ef4444", // Electric red
+    color: "#ef4444", // Crimson red
     heroImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
-    venue: "CRPF Ground & Institute Premises",
-    dates: "Schedule to be Notified",
-    timings: "Morning & Evening Sessions (CRPF & Campus)",
+    venue: "CRPF Ground (Athletics) & Institute Premises (Tug of War)",
+    dates: "College Days & Fest Weekend",
+    timings: "Scheduled Slots Announced on WhatsApp",
     registrationDeadline: "Registration Open",
-    registrationLink: "https://forms.gle/1k6ny1jJvXYc7jLu9",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform",
     registrationOptions: [
-      { label: "Athletics Registration", link: "https://forms.gle/1k6ny1jJvXYc7jLu9" },
-      { label: "Tug of War (Team)", link: "https://forms.gle/k6176aWSmQsSodgn9" },
-      { label: "Tug of War (Solo)", link: "https://forms.gle/BufA9T4aW2pESp7t5" }
+      { label: "Individual Athletics (₹20/event)", link: "https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform" },
+      { label: "4x100m Relay Registration (₹80/team)", link: "https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform" },
+      { label: "Tug of War Registration (₹100/team)", link: "https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform" }
     ],
-    rulebookPdf: "#",
+    rulebookPdf: "assets/docs/athletics-rulebook.pdf",
     categoriesList: [
-      "100m, 200m & 400m Sprints",
-      "4x100m Relay Showdown",
-      "Shot Put & Long Jump",
-      "Gym Benchpress & Deadlift Challenge",
-      "Tug of War (Team & Solo)"
+      "Track Sprints & Field Events (₹20/event)",
+      "4x100m Relay (₹80/team)",
+      "Tug of War Boys & Girls (₹100/team - 5v5)"
     ],
     rules: [
-      "Spikes are permitted for track sprints on designated track lanes at CRPF Ground.",
-      "Relay batons must be exchanged strictly within the 20-meter exchange zone.",
-      "Gym deadlift and bench press attempts evaluated under standard powerlifting rules.",
-      "Tug of War boots must not contain sharp metal spikes or cleats that dig into mats.",
-      "Athletes must report 30 minutes before heat marshalling call."
+      "<strong>Registration & Entry Fees:</strong> Registrations will be conducted online. Participation fee is <strong>₹20/- per individual event</strong>, <strong>₹80/- for 4x100m relay</strong>, and <strong>₹100/- for tug of war</strong>. For solo registrations, random teams will be allotted as per the registrations.",
+      "<strong>Tug of War Venue & Schedule:</strong> Tug of war will be held in the institute premises during college days. Matches will be conducted between 2 different pools (for boys and girls separately).",
+      "<strong>Tug of War Squad Composition:</strong> Each team will consist of <strong>5 players</strong>. Every registered player should be present on the day of their match.",
+      "<strong>Athletics Venue & Timing System:</strong> Athletics events will be held on the <strong>CRPF ground</strong>. It will be conducted in slots with the best timing becoming the winner. Finals will be decided on the basis of top best timings.",
+      "<strong>Mandatory Dress Code:</strong> Sports outfit is strictly mandatory to participate in all events. Spikes are permitted for track sprints on designated track lanes.",
+      "<strong>Tournament Structure (Tug of War):</strong> There will be <strong>2 pools for both girls and boys</strong>. Each team will play every other team in its own pool once. Pool A and Pool B standings will be calculated separately.",
+      "<strong>Tug of War Match Format:</strong><br>• <em>Pool Matches:</em> Best of 3 pulls.<br>• <em>Semi-Finals:</em> Best of 3 pulls.<br>• <em>Final:</em> Best of 3 pulls.",
+      "<strong>Playoffs & Qualification (Tug of War):</strong> The top 2 teams from each pool qualify for the semi-finals.<br>• <em>Semi-Final 1:</em> Pool A 1st place vs Pool B 2nd place.<br>• <em>Semi-Final 2:</em> Pool B 1st place vs Pool A 2nd place.<br>• Winners of both semi-finals advance to the Final. (The two semi-final losers may play a 3rd-place match if scheduled).",
+      "<strong>Pool Standings & Tie-Breaks:</strong> Pool standings determined by match wins. If teams are tied, tie-break criteria announced before the tournament will apply.",
+      "<strong>Authority & Communication:</strong> The referee's decision will be final. The organising committee may introduce or revise rules when necessary; all updates will be communicated through official WhatsApp groups."
     ],
     schedule: [
-      { date: "Notified Soon", time: "Morning & Evening", stage: "Track & Field Events, Gym & Tug of War", court: "CRPF Ground & Campus", status: "upcoming" }
+      { date: "College Days", time: "Slot Announced on WhatsApp", stage: "Tug of War League Matches (Best of 3 pulls)", court: "Institute Premises", status: "upcoming" },
+      { date: "Fest Weekend", time: "Morning & Afternoon Slots", stage: "Athletics Track Heats & Sprints (Best Timings)", court: "CRPF Ground", status: "upcoming" },
+      { date: "Fest Weekend", time: "Evening Slots", stage: "Tug of War & Athletics Finals Showdown", court: "CRPF Ground / Campus", status: "upcoming" }
     ],
     fixtures: [],
     coordinators: [
@@ -175,37 +180,42 @@ const SPORTS_DATA = {
     id: "football",
     name: "Football",
     slug: "football.html",
-    tagline: "Passion, precision, teamwork: battle for collegiate supremacy",
+    tagline: "11-A-Side Football Tournament • 8 Teams • 2 Groups • Auction System",
     category: "Team Sport",
     icon: "⚽",
     color: "#10b981", // Emerald green
     heroImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
     venue: "CRPF Ground (25 Oct) & IIT Ground (01 Nov)",
-    dates: "25th October & 1st November",
-    timings: "25 Oct: 08:00 AM - 06:00 PM | 01 Nov: 05:00 PM - 09:00 PM",
+    dates: "25th October & 1st November 2026",
+    timings: "25 Oct: 08:00 AM–12:00 PM & 02:00 PM–06:00 PM | 01 Nov: 04:30 PM–09:00 PM",
     registrationDeadline: "Registration Open",
     registrationLink: "https://forms.gle/gnLKUJyStiTKPjJ57",
-    rulebookPdf: "#",
+    rulebookPdf: "assets/docs/football-rulebook.pdf",
     categoriesList: [
-      "Inter-Batch 7v7 Football Championship",
-      "Penalty Shootout Sudden Death Challenge"
+      "11-A-Side Championship (8 Teams)",
+      "Group A & Group B League",
+      "Semi-Finals & Grand Final"
     ],
     rules: [
-      "Tournament conducted across two premier venues: CRPF Ground & IIT Ground.",
-      "25th Oct at CRPF Ground: 08:00 AM – 06:00 PM (includes a 2-hour afternoon heat buffer & lunch break).",
-      "1st Nov at IIT Ground: 05:00 PM – 09:00 PM evening clash under floodlights.",
-      "Team Composition: 7 on-field players + up to 5 rolling substitutes.",
-      "Match Duration: 25 minutes each half with a 5-minute halftime interval.",
-      "Shin guards and football studs/cleats are strictly compulsory for all players.",
-      "Standard tournament rules apply with no offside rule for the 7v7 format.",
-      "In knockout rounds, if tied at full-time: 5-5 penalty shootout, followed by sudden death.",
-      "The referee's decision on fouls and disciplinary cards is absolute."
+      "<strong>Eligibility & Registration:</strong> Participation is restricted to IIIT Vadodara students. Player registration will be conducted online with a participation fee of <strong>₹20 per player</strong>.",
+      "<strong>Team Ownership & Auction:</strong> There will be <strong>8 team owners</strong> (paying ₹200 per owner). Owners do not play for the teams they own. Owners select their team captain. Team formation takes place through an <strong>Auction on Wednesday, 21 October 2026</strong>.",
+      "<strong>Squad Composition:</strong> Each team must have a squad of <strong>13–15 players</strong>, including substitutes. <strong>11 players take the field</strong> for an 11-a-side match. The minimum number of players required to start or continue a match will be decided by the organizing committee.",
+      "<strong>Tournament Dates, Venues & Timings:</strong><br>• <em>Sunday, 25 October 2026:</em> CRPF Ground (8:00 AM–12:00 PM and 2:00 PM–6:00 PM; Break from 12:00 PM to 2:00 PM).<br>• <em>Sunday, 1 November 2026:</em> IIT Ground (4:30 PM–9:00 PM).",
+      "<strong>Group-Stage Structure:</strong> 8 teams divided into two groups of four: <strong>Group A and Group B</strong>. Shortened schedule: each team plays 2 group-stage matches. Group-stage matches may end in a draw.",
+      "<strong>Points System & Ranking:</strong> Win: 3 points, Draw: 1 point, Loss: 0 points. If tied, tie-breakers in order: Goal difference, goals scored, then head-to-head result.",
+      "<strong>Semi-Finals & Final:</strong> Top 2 teams from each group qualify.<br>• <em>Semi-Final 1:</em> Group A 1st place (A1) vs Group B 2nd place (B2).<br>• <em>Semi-Final 2:</em> Group B 1st place (B1) vs Group A 2nd place (A2).<br>• Winners qualify for the Final. No third-place match will be played.",
+      "<strong>Match Duration & Tie Resolution:</strong><br>• <em>Group Stage & Semi-Finals:</em> Two halves of 20 minutes each (5 min half-time break).<br>• <em>Final:</em> Two halves of 25 minutes each (5 min half-time break).<br>• <em>Tied Knockouts:</em> Decided by penalty shootout (standard 5 kicks per team, then sudden death).",
+      "<strong>Game Rules & Substitutions:</strong> Standard football rules apply. Standard offside rule applies. <strong>Rolling substitutions permitted</strong>, with a maximum of 3 players substituted per team per match. Players must comply with referee decisions.",
+      "<strong>Discipline & Walkovers:</strong> Referee's on-field decision is final. 2 yellow cards = red card (player leaves, team continues with one fewer player). <strong>No grace period</strong> for late arrivals; failure to appear results in a <strong>3–0 walkover</strong>.",
+      "<strong>Awards:</strong> Winner and runner-up trophies will be awarded."
     ],
     schedule: [
-      { date: "25 Oct", time: "08:00 AM - 06:00 PM", stage: "Group Stage & Knockouts (CRPF Ground)", court: "CRPF Ground", status: "upcoming" },
-      { date: "25 Oct", time: "12:30 PM - 02:30 PM", stage: "Afternoon Heat Buffer & Lunch Break", court: "CRPF Ground", status: "upcoming" },
-      { date: "01 Nov", time: "05:00 PM - 07:00 PM", stage: "Semi-Finals Under Lights (IIT Ground)", court: "IIT Ground", status: "upcoming" },
-      { date: "01 Nov", time: "07:30 PM - 09:00 PM", stage: "Grand Championship Finals (IIT Ground)", court: "IIT Ground", status: "upcoming" }
+      { date: "21 Oct", time: "Evening Slot", stage: "Team Formation & Player Auction (8 Team Owners)", court: "Institute / Online", status: "upcoming" },
+      { date: "25 Oct", time: "08:00 AM - 12:00 PM", stage: "Group Stage Round 1 (CRPF Ground)", court: "CRPF Ground", status: "upcoming" },
+      { date: "25 Oct", time: "12:00 PM - 02:00 PM", stage: "Mid-Day Rest Interval & Lunch Break", court: "CRPF Ground", status: "upcoming" },
+      { date: "25 Oct", time: "02:00 PM - 06:00 PM", stage: "Group Stage Round 2 (CRPF Ground)", court: "CRPF Ground", status: "upcoming" },
+      { date: "01 Nov", time: "04:30 PM - 07:00 PM", stage: "Semi-Finals: A1 vs B2 & B1 vs A2 (IIT Ground)", court: "IIT Ground", status: "upcoming" },
+      { date: "01 Nov", time: "07:30 PM - 09:00 PM", stage: "Grand Championship Final (IIT Ground)", court: "IIT Ground", status: "upcoming" }
     ],
     fixtures: [],
     gallery: [
@@ -215,8 +225,8 @@ const SPORTS_DATA = {
       { url: "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=800&q=80", caption: "Team Spirit & Goal Celebration" }
     ],
     coordinators: [
-      { name: "Mohit Shekhawat", role: "Secretary (Sec)", email: "202451109@iiitvadodara.ac.in" },
-      { name: "Shikhar Singh", role: "Joint Secretary (Jsec)", email: "20251504070@iiitvadodara.ac.in" }
+      { name: "Mohit Shekhawat", role: "Secretary (Sec)", phone: "", email: "202451109@iiitvadodara.ac.in" },
+      { name: "Shikhar Singh", role: "Joint Secretary (Jsec)", phone: "", email: "20251504070@iiitvadodara.ac.in" }
     ]
   },
 
