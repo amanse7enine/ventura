@@ -29,7 +29,13 @@ const SPORTS_DATA = {
     category: "Racquet Sport",
     icon: "🏸",
     color: "#3b82f6", // Electric blue
-    heroImage: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "assets/images/badminton-smash.jpg",
+    gallery: [
+      { url: "assets/images/badminton-smash.jpg", caption: "Explosive Jump Smash on Indoor Wooden Court" },
+      { url: "assets/images/badminton-shuttle.jpg", caption: "Tournament Shuttlecock & Professional Racquet Strings" },
+      { url: "assets/images/badminton-rally.jpg", caption: "High-Speed Reflexes & Backhand Return" },
+      { url: "assets/images/badminton-match.jpg", caption: "Competitive Indoor Arena Matchplay Under Lights" }
+    ],
     venue: "Aloka Sports Academy",
     dates: "18th & 20th October",
     timings: "18 Oct: After 2:00 PM & 6:00 PM | 20 Oct: QF, SF & Finals",
