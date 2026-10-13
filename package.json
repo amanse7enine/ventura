@@ -1,0 +1,19 @@
+{
+  "name": "venturawebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/generate-qrcodes.js && node scripts/generate-rulebooks.js && node scripts/build-sports-pages.js",
+    "generate-qr": "node scripts/generate-qrcodes.js",
+    "build-pages": "node scripts/build-sports-pages.js",
+    "start": "npx serve .",
+    "generate-docs": "node scripts/generate-rulebooks.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code & Poster Hub | VENTURA - IIIT Vadodara</title>
+  <meta name="description" content="Generate, test, and download QR codes and printable poster cards for all 8 sports in Ventura - IIIT Vadodara Sports Event.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+  <style>
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 4rem;
+    }
+    .poster-card {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      border: 2px solid transparent;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .poster-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      border-color: var(--accent-orange);
+    }
+    .poster-college-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .poster-fest-header {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+    .poster-sport-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .poster-qr-wrapper {
+      width: 220px;
+      height: 220px;
+      background: #fff;
+      padding: 8px;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .poster-qr-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .poster-url-box {
+      font-size: 0.75rem;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 6px 10px;
+      border-radius: 6px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 1.25rem;
+      font-family: monospace;
+    }
+    .poster-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 100%;
+    }
+    .poster-instructions {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient glow -->
+  <div class="bg-mesh">
+    <div class="mesh-blob blob-1"></div>
+    <div class="mesh-blob blob-2"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo-badge">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara Sports</span></h1>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#sports">All 8 Sports</a></li>
+        <li><a href="qr-codes.html" class="active">QR Code Hub 📱</a></li>
+        <li><a href="index.html#schedule">Schedule</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm btn-print-poster">🖨️ Print All Posters</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="container" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div class="hero-pill">
+      <span>📱</span> Official QR Code Distribution Hub
+    </div>
+    <h2 style="font-size: 2.6rem; margin-bottom: 0.75rem;">
+      SPORTS EVENT <span class="gradient-text">QR CODE POSTERS</span>
+    </h2>
+    <p style="color: var(--text-muted); max-width: 720px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+      Each sport has its own dedicated page and unique QR code. Students can scan these codes from notice boards, courts, and banners across campus to view schedules, rules, live fixtures, and coordinator contacts.
+    </p>
+
+    <!-- Instructions & Domain Customizer for Organizers -->
+    <div class="poster-instructions" style="text-align: left; max-width: 900px; margin: 0 auto 3rem auto;">
+      <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;">
+        <span>⚙️</span> Organizer Tool: Custom Domain / Live URL Setup
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+        When you publish this website to GitHub Pages (e.g. <code>https://your-user.github.io/venturawebsite</code>) or Vercel / Netlify or Google Sites, enter your published base URL below. The links below will instantly update for testing!
+      </p>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="text" id="customDomainInput" placeholder="e.g. https://ventura.iiitv.ac.in or https://username.github.io/venturawebsite" style="flex: 1; min-width: 280px; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.8); color: #fff; font-size: 0.92rem;">
+        <button id="updateDomainBtn" class="btn btn-primary">Update Links</button>
+        <button class="btn btn-secondary btn-print-poster">🖨️ Print Sheet</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- QR Code Posters Grid -->
+  <main class="container">
+    <div class="qr-grid">
+
+      <!-- 1. Badminton Poster -->
+      <div class="poster-card" data-sport-qr-target="badminton.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill">🏸 BADMINTON</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/badminton-qr.png" alt="Badminton QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/badminton.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Aloka Sports Academy (Buses Provided)<br>
+          18 & 20 Oct | Sec: Ipsit (9138705033) • Jsec: Abhishek (8329382940)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/badminton-qr.png" download="badminton-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="badminton.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 2. Cricket Poster -->
+      <div class="poster-card" data-sport-qr-target="cricket.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #b45309;">🏏 CRICKET (T10)</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/cricket-qr.png" alt="Cricket QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/cricket.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Main Cricket Ground / Oval<br>
+          Scan for Live Scores, Overs & Fixtures
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/cricket-qr.png" download="cricket-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="cricket.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 3. Athletics Poster -->
+      <div class="poster-card" data-sport-qr-target="athletics.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #dc2626;">🏃 ATHLETICS & GYM</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/athletics-qr.png" alt="Athletics QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/athletics.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 CRPF Ground & Institute Premises<br>
+          Track, Field & Tug of War | Sec: Sarthak (7409402485) • Jsec: Yash (8180874428)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/athletics-qr.png" download="athletics-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="athletics.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 4. Football Poster -->
+      <div class="poster-card" data-sport-qr-target="football.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #059669;">⚽ FOOTBALL (7v7)</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/football-qr.png" alt="Football QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/football.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 CRPF Ground (25 Oct) & IIT Ground (01 Nov)<br>
+          Sec: Mohit (202451109) • Jsec: Shikhar (20251504070)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/football-qr.png" download="football-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="football.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 5. Volleyball Poster -->
+      <div class="poster-card" data-sport-qr-target="volleyball.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #0891b2;">🏐 VOLLEYBALL</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/volleyball-qr.png" alt="Volleyball QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/volleyball.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 College Ground • During Lunch Hours<br>
+          19 Oct – 06 Nov | Sec: Aditya (9571734643) • Joint Sec: Anshu (8306724203)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/volleyball-qr.png" download="volleyball-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="volleyball.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 6. Chess Poster -->
+      <div class="poster-card" data-sport-qr-target="chess.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #7c3aed;">♟️ CHESS (RAPID)</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/chess-qr.png" alt="Chess QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/chess.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Online & Offline (Courtyard) Hybrid<br>
+          19 Oct – 06 Nov | Sec: Aahan (9958030019) • Jsec: Ritika (7296914433)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/chess-qr.png" download="chess-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="chess.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 7. Carrom Poster -->
+      <div class="poster-card" data-sport-qr-target="carrom.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #db2777;">🎯 CARROM</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/carrom-qr.png" alt="Carrom QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/carrom.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Institute Premises • 01:00 PM – 03:00 PM<br>
+          From 20th Oct | Sec: Harshit (8619459354) • Jsec: Aashu (9142879660)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/carrom-qr.png" download="carrom-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="carrom.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 8. Table Tennis Poster -->
+      <div class="poster-card" data-sport-qr-target="table-tennis.html">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ANNUAL SPORTS MEET</span>
+        <div class="poster-sport-pill" style="background: #0d9488;">🏓 TABLE TENNIS</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/table-tennis-qr.png" alt="Table Tennis QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/table-tennis.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Clg Premises (8am-6pm) & Hostel (8pm-11pm)<br>
+          20 Oct – 06 Nov | Sec: Bhavya (8329455093) • Jsec: Akshat (7050357190)
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/table-tennis-qr.png" download="table-tennis-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="table-tennis.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+      <!-- 9. Main Ventura Portal Poster -->
+      <div class="poster-card" data-sport-qr-target="index.html" style="background: #fffbeb; border: 2px dashed #f59e0b;">
+        <span class="poster-college-header">IIIT Vadodara • Ventura 2024-25</span>
+        <span class="poster-fest-header">ALL SPORTS MASTER HUB</span>
+        <div class="poster-sport-pill" style="background: #d97706;">🏆 MAIN PORTAL</div>
+        <div class="poster-qr-wrapper">
+          <img src="assets/images/qr/hub-qr.png" alt="Main Hub QR Code">
+        </div>
+        <div class="poster-url-box qr-display-url">https://iiitv-ventura.web.app/index.html</div>
+        <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 1rem;">
+          📍 Central Campus Notice Boards<br>
+          Scan for All 8 Sports & Fest Schedule
+        </p>
+        <div class="poster-actions">
+          <a href="assets/images/qr/hub-qr.png" download="hub-qr.png" class="btn btn-secondary btn-sm" style="color: #0f172a; border-color: #cbd5e1;">📥 PNG</a>
+          <a href="index.html" target="_blank" class="btn btn-primary btn-sm qr-open-link">Open Page ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: var(--text-muted); font-size: 0.88rem;">
+        VENTURA 2024-25 • Indian Institute of Information Technology Vadodara (IIITV)<br>
+        Sports Committee Sec: Aman (📞 <a href="tel:8318567785" style="color: #38bdf8;">8318567785</a>) • ✉️ <a href="mailto:sports.committee@iiitvadodara.ac.in" style="color: var(--accent-orange);">sports.committee@iiitvadodara.ac.in</a><br>
+        Organizers can print these poster cards directly using Ctrl+P / ⌘+P or download the high-res PNGs for Canva posters.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/sports-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
