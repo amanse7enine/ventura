@@ -103,12 +103,23 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: var(--light-bg);
-  background-image: 
-    radial-gradient(circle at 10% 15%, rgba(32, 169, 214, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 90% 85%, rgba(20, 85, 166, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.03) 0%, transparent 50%);
+  background-color: #F6FAFD;
+}
+
+/* Subtle Official Ventura'26 Poster Artistic Watermark Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url('../images/ventura-poster.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  opacity: 0.22;
+  filter: saturate(1.15) contrast(1.05);
+  pointer-events: none;
 }
 
 /* Subtle atmospheric mesh */
@@ -600,7 +611,8 @@ body.nav-open {
   padding: 5rem 0 4rem 0;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F2F7FA 100%);
+  background: rgba(246, 250, 253, 0.42);
+  backdrop-filter: blur(1px);
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -661,18 +673,21 @@ body.nav-open {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #1455A6 0%, #20A9D6 55%, #F5A623 100%);
+  background: linear-gradient(135deg, #1455A6 0%, #20A9D6 60%, #D98204 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  font-weight: 900;
 }
 
 .hero p.tagline {
   font-size: 1.15rem;
-  color: var(--text-secondary);
+  color: #1e293b;
   max-width: 680px;
   margin: 0 auto 2.25rem auto;
   line-height: 1.6;
+  font-weight: 500;
+  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.95);
 }
 
 /* Hero Stats */
