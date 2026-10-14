@@ -35,9 +35,61 @@
       <div class="nav-actions">
         <a href="#qr-section" class="btn btn-secondary btn-sm">📱 Poster QR</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge" style="background: #ef4444;">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Page Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="#schedule">📅 Schedule & Timings</a></li>
+          <li><a href="#rules">📜 Rules & Regulations</a></li>
+          <li><a href="#coordinators">👥 Student Coordinators</a></li>
+          <li><a href="#qr-section">📱 Scan / Poster QR</a></li>
+          <li><a href="qr-codes.html">🖨️ QR Distribution Hub</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Browse Other Sports</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdO7i29-6uN1eD270U9_wJ1y-eB-zDdf8_y4w_gJ7v0e8N-jQ/viewform" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for Athletics & Tug of War</a>
+        
+        <a href="assets/docs/athletics-rulebook.pdf" download="athletics-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Sport Hero Banner -->
   <header class="sport-hero">
@@ -172,7 +224,7 @@
             
             
             
-            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: var(--radius-md);">
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
               <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
                 <span>⚡</span> Tug of War & Athletics Competition Structure
               </h4>
@@ -180,16 +232,16 @@
                 Official 2-Pool Tug of War League & CRPF Ground Track Timings.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• 2 Pools (Separate for Boys & Girls).<br>• 5 Players per team.<br>• Pool matches & Finals: <strong>Best of 3 pulls</strong>.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Venue: CRPF Ground.<br>• Conducted in timing slots.<br>• Winner decided by top recorded timings.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• ₹20/individual, ₹80/relay, ₹100/tug of war.<br>• Tug of War: Top 2 from each pool advance to SF (A1 vs B2, B1 vs A2).<br>• Sports outfit mandatory.</p>
                 </div>
               </div>
@@ -197,9 +249,11 @@
   
             
             
+            
+            
 
             
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
               <div>
                 <strong style="display: block; color: #fff; font-size: 0.95rem;">✅ Official Signed Rulebook Available</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Download the official PDF document with complete bylaws, format breakdown, and committee sign-off.</span>
@@ -409,6 +463,9 @@
     <a href="#coordinators"><span>👥</span> Contact</a>
     <a href="#qr-section"><span>📱</span> QR</a>
   </div>
+
+
+  
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>

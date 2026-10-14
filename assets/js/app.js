@@ -7,8 +7,60 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initQRGeneratorModal();
   initPrintHandlers();
-  initDynamicDomainUpdater();
+
+  initMobileNav();
 });
+
+/**
+ * Mobile Navigation Drawer & Hamburger Menu
+ */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('navToggle');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+
+  if (!toggleBtn || !drawer || !overlay) return;
+
+  function openDrawer() {
+    toggleBtn.classList.add('active');
+    drawer.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('nav-open');
+  }
+
+  function closeDrawer() {
+    toggleBtn.classList.remove('active');
+    drawer.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (drawer.classList.contains('active')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  // Close when tapping any drawer link
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('active')) {
+      closeDrawer();
+    }
+  });
+}
+
 
 /**
  * Handle Tab navigation on individual sports pages

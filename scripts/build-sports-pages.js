@@ -40,7 +40,7 @@ function generateSportPage(sport) {
 
   
   const footballTournamentCard = sport.id === 'football' ? `
-            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md);">
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
               <h4 style="color: #10b981; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
                 <span>⚡</span> 11-A-Side Tournament & Playoff Format (8 Teams)
               </h4>
@@ -48,16 +48,16 @@ function generateSportPage(sport) {
                 8 Teams divided into Group A & Group B. 11 on field (squad 13-15). Top 2 from each group advance to Semi-Finals.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Group Stage (20 Min Halves)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Group Stage (20 Min Halves)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 25 Oct at CRPF Ground.<br>• 2 matches per team; Win=3, Draw=1, Loss=0.<br>• Tie-break: GD > Goals Scored > Head-to-Head.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Semi-Finals (20 Min Halves)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Semi-Finals (20 Min Halves)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 1 Nov at IIT Ground.<br>• SF 1: Group A 1st vs Group B 2nd.<br>• SF 2: Group B 1st vs Group A 2nd.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f59e0b;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Grand Final (25 Min Halves)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f59e0b;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Grand Final (25 Min Halves)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Sunday, 1 Nov at IIT Ground.<br>• Tied knockout: Penalty shootout (5 kicks + sudden death).<br>• Winner & Runner-up Trophies awarded.</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ function generateSportPage(sport) {
   ` : '';
 
   const athleticsTournamentCard = sport.id === 'athletics' ? `
-            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: var(--radius-md);">
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
               <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
                 <span>⚡</span> Tug of War & Athletics Competition Structure
               </h4>
@@ -73,17 +73,67 @@ function generateSportPage(sport) {
                 Official 2-Pool Tug of War League & CRPF Ground Track Timings.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• 2 Pools (Separate for Boys & Girls).<br>• 5 Players per team.<br>• Pool matches & Finals: <strong>Best of 3 pulls</strong>.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Venue: CRPF Ground.<br>• Conducted in timing slots.<br>• Winner decided by top recorded timings.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• ₹20/individual, ₹80/relay, ₹100/tug of war.<br>• Tug of War: Top 2 from each pool advance to SF (A1 vs B2, B1 vs A2).<br>• Sports outfit mandatory.</p>
+                </div>
+              </div>
+            </div>
+  ` : '';
+
+  const chessTournamentCard = sport.id === 'chess' ? `
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
+              <h4 style="color: #c084fc; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>♟️</span> Single-Elimination Knockout & Rapid Format
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Official 10+0 Time Control, Touch-Move Offline, and Instant Armageddon Tiebreaks.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem;">
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #c084fc;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. 10+0 Rapid Control</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Single game per match.<br>• 10 mins per player (no increment).<br>• Touch-move strictly enforced offline.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #e879f9;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Armageddon Tiebreak</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Played immediately if drawn.<br>• White gets 5 mins, Black gets 4 mins.<br>• If draw, <strong>Black wins match</strong>.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Offline Final Board</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Hybrid rounds on Courtyard & Chess.com.<br>• Grand Final strictly offline on physical board.<br>• 5-min grace period before forfeit.</p>
+                </div>
+              </div>
+            </div>
+  ` : '';
+
+  const tableTennisTournamentCard = sport.id === 'table-tennis' ? `
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
+              <h4 style="color: #2dd4bf; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>🏓</span> TENEX Table Tennis Championship Rules
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Official Best of 3 Games to 11 Points • 5 Categories • 16 cm Vertical Service Rule.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem;">
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #2dd4bf;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Match Structure</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Best of 3 games to 11 points (first to 2).<br>• Deuce at 10-10 requires 2-point lead.<br>• Up to 2 time-outs per match.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. 16cm Service & Play</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Ball released min 16cm vertically from open palm.<br>• Double touch = fault (point to opponent).<br>• 10-min grace period before walkover.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #3b82f6;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Doubles & Mixed</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Diagonal serve (right-to-right).<br>• Alternating hits by teammates during rally.<br>• Non-marking shoes & own racket.</p>
                 </div>
               </div>
             </div>
@@ -98,16 +148,16 @@ function generateSportPage(sport) {
                 2 Pools with 3 Teams each. Each team plays 2 matches against pool opponents in the preliminary stage.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f59e0b;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. The Qualifier (10 Overs)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f59e0b;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. The Qualifier (10 Overs)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Top Pool A vs Top Pool B.<br>• <span style="color: #34d399;">Winner:</span> Directly to Grand Final<br>• <span style="color: #f59e0b;">Loser:</span> Gets second chance in Eliminator</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. The Eliminator (10 Overs)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. The Eliminator (10 Overs)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Loser of Qualifier vs Best-Ranked remaining team from both pools.<br>• <span style="color: #34d399;">Winner:</span> Advances to Grand Final<br>• <span style="color: #ef4444;">Loser:</span> Knocked out</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Grand Final (15 Overs)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Grand Final (15 Overs)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Winner of Qualifier vs Winner of Eliminator.<br>• 5 Overs Powerplay.<br>• <span style="color: #f59e0b;">Champion:</span> Crowned Ventura 2k26 Victor!</p>
                 </div>
               </div>
@@ -124,16 +174,16 @@ function generateSportPage(sport) {
                 Official Singles & Doubles Knockout Tournament. Conducted in Institute Premises.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ec4899;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Knockout Structure</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ec4899;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Knockout Structure</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Singles (1v1) & Doubles (2v2).<br>• Opening & Quarters: <strong>Best of 3 Boards</strong> (first to 2).<br>• Grand Final: <strong>Best of 5 Boards</strong>.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f43f5e;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Queen & Covering Rule</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f43f5e;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Queen & Covering Rule</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Queen (Red): <strong>+3 Points</strong>.<br>• Must be covered on same or next eligible turn.<br>• If uncovered, returned to center by referee.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Scoring & Penalties</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Scoring & Penalties</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• <strong>1 point</strong> per opposing coin left on board.<br>• Pocketing striker = Foul + 1 penalty coin.<br>• Referee on-board decision final.</p>
                 </div>
               </div>
@@ -149,16 +199,16 @@ function generateSportPage(sport) {
                 10 Teams divided into 2 Pools of 5 teams. 7 on court (min 1 girl mandatory). Top 2 from each pool advance to Semi-Finals.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Pool Stage (Best of 3 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Pool Stage (Best of 3 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Pool A (5 Teams) & Pool B (5 Teams).<br>• Sets: <strong>15 - 15 - 21</strong> points.<br>• 4 pool matches each; top 2 qualify.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Semi-Finals (Best of 3 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Semi-Finals (Best of 3 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• <em>SF 1:</em> Pool A 1st vs Pool B 2nd<br>• <em>SF 2:</em> Pool B 1st vs Pool A 2nd<br>• Sets: <strong>21 - 21 - 25</strong> points.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Grand Final (Best of 5 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Grand Final (Best of 5 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Winner SF 1 vs Winner SF 2.<br>• Sets: <strong>21 - 21 - 21 - 21 - 25</strong>.<br>• <span style="color: #06b6d4;">Champion:</span> Crowned Ventura 2k26 Victor!</p>
                 </div>
               </div>
@@ -240,9 +290,61 @@ function generateSportPage(sport) {
       <div class="nav-actions">
         <a href="#qr-section" class="btn btn-secondary btn-sm">📱 Poster QR</a>
         <a href="${sport.registrationLink}" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge" style="background: ${sport.color};">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Page Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="#schedule">📅 Schedule & Timings</a></li>
+          <li><a href="#rules">📜 Rules & Regulations</a></li>
+          <li><a href="#coordinators">👥 Student Coordinators</a></li>
+          <li><a href="#qr-section">📱 Scan / Poster QR</a></li>
+          <li><a href="qr-codes.html">🖨️ QR Distribution Hub</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Browse Other Sports</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="${sport.registrationLink}" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for ${sport.name}</a>
+        ${sport.rulebookPdf && sport.rulebookPdf !== '#' ? `
+        <a href="${sport.rulebookPdf}" download="${sport.id}-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        ` : ''}
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Sport Hero Banner -->
   <header class="sport-hero">
@@ -342,9 +444,11 @@ function generateSportPage(sport) {
             ${athleticsTournamentCard}
             ${volleyballPlayoffCard}
             ${carromMatchCard}
+            ${chessTournamentCard}
+            ${tableTennisTournamentCard}
 
             ${sport.rulebookPdf && sport.rulebookPdf !== '#' ? `
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
               <div>
                 <strong style="display: block; color: #fff; font-size: 0.95rem;">✅ Official Signed Rulebook Available</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Download the official PDF document with complete bylaws, format breakdown, and committee sign-off.</span>
@@ -355,7 +459,7 @@ function generateSportPage(sport) {
               </div>
             </div>
             ` : `
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: var(--light-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;">
               <div>
                 <strong style="display: block;">Need the complete official Rulebook?</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Download the signed PDF document with full bylaws and bracket diagrams.</span>
@@ -522,6 +626,9 @@ function generateSportPage(sport) {
     <a href="#coordinators"><span>👥</span> Contact</a>
     <a href="#qr-section"><span>📱</span> QR</a>
   </div>
+
+
+  
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>

@@ -35,9 +35,61 @@
       <div class="nav-actions">
         <a href="#qr-section" class="btn btn-secondary btn-sm">📱 Poster QR</a>
         <a href="https://forms.gle/kqg9ZGWcMRLr2RQk6" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge" style="background: #06b6d4;">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Page Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="#schedule">📅 Schedule & Timings</a></li>
+          <li><a href="#rules">📜 Rules & Regulations</a></li>
+          <li><a href="#coordinators">👥 Student Coordinators</a></li>
+          <li><a href="#qr-section">📱 Scan / Poster QR</a></li>
+          <li><a href="qr-codes.html">🖨️ QR Distribution Hub</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Browse Other Sports</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="https://forms.gle/kqg9ZGWcMRLr2RQk6" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for Volleyball</a>
+        
+        <a href="assets/docs/volleyball-rulebook.pdf" download="volleyball-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Sport Hero Banner -->
   <header class="sport-hero">
@@ -190,25 +242,27 @@
                 10 Teams divided into 2 Pools of 5 teams. 7 on court (min 1 girl mandatory). Top 2 from each pool advance to Semi-Finals.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
-                  <strong style="color: #fff; font-size: 0.88rem;">1. Pool Stage (Best of 3 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Pool Stage (Best of 3 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Pool A (5 Teams) & Pool B (5 Teams).<br>• Sets: <strong>15 - 15 - 21</strong> points.<br>• 4 pool matches each; top 2 qualify.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
-                  <strong style="color: #fff; font-size: 0.88rem;">2. Semi-Finals (Best of 3 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Semi-Finals (Best of 3 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• <em>SF 1:</em> Pool A 1st vs Pool B 2nd<br>• <em>SF 2:</em> Pool B 1st vs Pool A 2nd<br>• Sets: <strong>21 - 21 - 25</strong> points.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: #fff; font-size: 0.88rem;">3. Grand Final (Best of 5 Sets)</strong>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Grand Final (Best of 5 Sets)</strong>
                   <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">Winner SF 1 vs Winner SF 2.<br>• Sets: <strong>21 - 21 - 21 - 21 - 25</strong>.<br>• <span style="color: #06b6d4;">Champion:</span> Crowned Ventura 2k26 Victor!</p>
                 </div>
               </div>
             </div>
   
             
+            
+            
 
             
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
               <div>
                 <strong style="display: block; color: #fff; font-size: 0.95rem;">✅ Official Signed Rulebook Available</strong>
                 <span style="font-size: 0.82rem; color: var(--text-muted);">Download the official PDF document with complete bylaws, format breakdown, and committee sign-off.</span>
@@ -412,6 +466,9 @@
     <a href="#coordinators"><span>👥</span> Contact</a>
     <a href="#qr-section"><span>📱</span> QR</a>
   </div>
+
+
+  
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>

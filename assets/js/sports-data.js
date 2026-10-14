@@ -287,34 +287,39 @@ const SPORTS_DATA = {
     id: "chess",
     name: "Chess",
     slug: "chess.html",
-    tagline: "The battle of wits, grand tactics and supreme minds",
+    tagline: "Single-Elimination Knockout • 10+0 Rapid • Armageddon Tiebreak",
     category: "Mind Sport",
     icon: "♟️",
-    color: "#8b5cf6", // Purple / Violet
+    color: "#a855f7", // Purple
     heroImage: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1200&q=80",
-    venue: "Online & Offline (Courtyard) Hybrid",
-    dates: "19th October to 6th November",
-    timings: "During Lunch hours & Hostels in evenings",
-    registrationDeadline: "Registration Open",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScQcpJ2ybJvl2K78HVP7WCsAuNovzBY3embcvi8Q7YV-SdfSw/viewform?usp=header",
-    rulebookPdf: "#",
+    venue: "Institute Premises (Courtyard) & Chess.com Hybrid",
+    dates: "Registration Till 18th Oct | Matches from 19th Oct",
+    timings: "Scheduled Slots (10+0 Rapid Matches)",
+    registrationDeadline: "18th October 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform",
+    rulebookPdf: "assets/docs/chess-rulebook.pdf",
     categoriesList: [
-      "Hybrid Swiss Open Rounds",
-      "Courtyard Offline Arena",
-      "Blitz & Rapid Knockouts"
+      "Offline Mode (Physical Board at Venue)",
+      "Online Mode (Chess.com Verified)",
+      "Single-Elimination Rapid Knockout (10+0)"
     ],
     rules: [
-      "Hybrid tournament format: Matches played Online & Offline (Courtyard).",
-      "Scheduled daily during lunch hours on campus and in hostels during the evening.",
-      "Time controls and pairing announcements managed via official tournament links.",
-      "FIDE Rapid & Blitz rules apply with fair play monitoring for online games.",
-      "Touch-move rule strictly observed for in-person courtyard boards.",
-      "Arbiters' decisions on illegal moves and clock discrepancies are final."
+      "<strong>Registration & Entry:</strong> Online registration. Registration deadline is <strong>18th October 2026</strong>. Participation fee is <strong>₹20/- per player</strong> (Individual entry). At registration, every player must choose their mode: <strong>Offline</strong> (physical board at venue) or <strong>Online</strong> (on Chess.com with correct username and college email id).",
+      "<strong>Tournament Format:</strong> Single-elimination knockout (winner advances, loser is eliminated). Random draw bracket with power of 2 sizing (empty slots filled with byes in Round 1 only, distributed evenly). Rounds proceed from Round 1, Round 2 to Quarter-Finals, Semi-Finals, and the Final.",
+      "<strong>Championship Grand Final:</strong> The Final will strictly be played <strong>offline on a physical board</strong> in front of the organizing committee.",
+      "<strong>Game Rules & Time Control:</strong> Each match is a single game of chess. Time control is <strong>10 minutes per player with no increment (10+0)</strong>. Colors decided by committee or coin toss. Official FIDE rules apply.",
+      "<strong>Touch-Move Rule:</strong> Strict touch-move applies in all offline matches: a piece touched must be moved, and a piece released on a square must stay there.",
+      "<strong>Draw & Armageddon Tiebreak:</strong> Draws by agreement are allowed only after move 20 (before that requires arbiter approval). A drawn game is settled immediately by an <strong>Armageddon game</strong>: colors swapped, White gets 5 minutes and Black gets 4 minutes (no increment). If Armageddon is drawn, <strong>Black wins the match</strong>.",
+      "<strong>Offline Match Conditions:</strong> Boards, pieces, and digital clocks provided by committee. Players must report to table at scheduled time. More than <strong>5 minutes late = forfeit</strong>. Mobile phones must be switched off and kept away.",
+      "<strong>Online Match Conditions:</strong> Played on Chess.com. Designated player creates unrated 10+0 challenge. More than 5 minutes late = forfeit. Winner sends game link/screenshot immediately. <strong>Chess engines or outside assistance strictly prohibited</strong> (cheating leads to immediate disqualification).",
+      "<strong>Online vs Offline Matchups:</strong> If players chose the same mode, match played in that mode. If chosen modes differ, the committee decides the mode and informs both players in advance.",
+      "<strong>Arbiter & Authority:</strong> The arbiter's decision is final. Misconduct, abusive behavior, or arguing with the arbiter can lead to game loss or disqualification."
     ],
     schedule: [
-      { date: "19 Oct - 06 Nov", time: "Lunch Hours", stage: "Courtyard In-Person Rounds", court: "Campus Courtyard", status: "upcoming" },
-      { date: "19 Oct - 06 Nov", time: "Evenings", stage: "Hostel & Online Evening Matches", court: "Online / Hostels", status: "upcoming" },
-      { date: "06 Nov", time: "Finals Slot", stage: "Grand Championship Finals & Blitz Showdown", court: "Courtyard Arena", status: "upcoming" }
+      { date: "18 Oct", time: "Midnight", stage: "Online Registration Deadline & Bracket Generation", court: "Online Portal", status: "upcoming" },
+      { date: "19 Oct - 04 Nov", time: "Scheduled Slots", stage: "Knockout Rounds (10+0 Rapid Single Games)", court: "Courtyard & Chess.com", status: "upcoming" },
+      { date: "05 Nov", time: "Evening Slot", stage: "Quarter-Finals & Semi-Finals (10+0 + Armageddon)", court: "Courtyard Arena", status: "upcoming" },
+      { date: "06 Nov", time: "Finals Slot", stage: "Grand Championship Final (Offline Physical Board)", court: "Courtyard Arena", status: "upcoming" }
     ],
     fixtures: [],
     coordinators: [
@@ -378,43 +383,49 @@ const SPORTS_DATA = {
     id: "table-tennis",
     name: "Table Tennis",
     slug: "table-tennis.html",
-    tagline: "Spin, speed and split-second smashes on the green table",
+    tagline: "Official TENEX Championship • Best of 3 Games to 11 Points • 5 Categories",
     category: "Racquet Sport",
     icon: "🏓",
     color: "#14b8a6", // Teal
     heroImage: "assets/images/real-table-tennis.jpg",
-    venue: "College Premises (8 AM - 6 PM) & Hostel (8 PM - 11 PM)",
-    dates: "20 Oct to 6 Nov",
-    timings: "8:00 AM – 6:00 PM in College | 8:00 PM – 11:00 PM in Hostel",
-    registrationDeadline: "Registration Open",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd5lMwsnbUFTXZCduRMI1rZWZ6vtXhSZDVPm-ueJRLggqsqYQ/viewform?usp=dialog",
-    rulebookPdf: "#",
-    categoriesList: [
-      "Men's Singles Championship",
-      "Women's Singles Championship",
-      "Open Doubles Tournament"
-    ],
-    rules: [
-      "Venues: College Premises (8 AM - 6 PM) and Hostel Hall (8 PM - 11 PM).",
-      "Stag 3-star 40+ seamless plastic balls will be used for all official ties.",
-      "Service toss must be at least 16 cm vertically upwards from open palm.",
-      "All matches: Best of 5 games (11 points per game; 2-point lead required to win).",
-      "Expedite system will be introduced if a game remains unfinished after 10 minutes.",
-      "Players must use ITTF-approved rubbers (Red and Black on opposite sides)."
-    ],
-    schedule: [
-      { date: "20 Oct - 06 Nov", time: "08:00 AM - 06:00 PM", stage: "Day Matches (College Premises)", court: "College Premises", status: "upcoming" },
-      { date: "20 Oct - 06 Nov", time: "08:00 PM - 11:00 PM", stage: "Night Matches (Hostel TT Hall)", court: "Hostel TT Hall", status: "upcoming" },
-      { date: "06 Nov", time: "Evening Slots", stage: "Singles & Doubles Grand Finals", court: "College TT Arena", status: "upcoming" }
-    ],
-    fixtures: [],
     gallery: [
       { url: "assets/images/real-table-tennis.jpg", caption: "Table Tennis Matchplay at Campus Arena" },
       { url: "assets/images/real-champions-team.jpg", caption: "IIIT Vadodara Championship Team" }
     ],
+    venue: "College Premises & Hostel TT Hall",
+    dates: "20th Oct – 06th Nov",
+    timings: "Day (8:00 AM - 6:00 PM) & Night (8:00 PM - 11:00 PM)",
+    registrationDeadline: "Registration Open",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform",
+    rulebookPdf: "assets/docs/table-tennis-rulebook.pdf",
+    categoriesList: [
+      "Men's Singles",
+      "Men's Doubles",
+      "Women's Singles",
+      "Women's Doubles",
+      "Mixed Doubles (1 Male & 1 Female)"
+    ],
+    rules: [
+      "<strong>Tournament Categories:</strong> Men's Singles, Men's Doubles, Women's Singles, Women's Doubles, and Mixed Doubles (each pair must consist of one male and one female participant).",
+      "<strong>Match Format:</strong> Every match will be played as <strong>best of 3 games</strong>, with each game played to <strong>11 points</strong>. The player or pair that wins 2 games wins the match. At 10–10 (deuce), the game continues until one player or pair leads by 2 points.",
+      "<strong>Pre-Match Protocol:</strong> Toss conducted by umpire/referee decides initial serve/receive and playing side. A 5-minute warm-up is allowed before play begins. Players must report at least 10 minutes prior.",
+      "<strong>Grace Period & Walkovers:</strong> A 10-minute grace period is allowed for late arrivals. If a player/pair fails to arrive within 10 minutes, the opponent is awarded a <strong>walkover victory</strong>.",
+      "<strong>Time-Outs:</strong> Each player/pair may request up to two time-outs during a match, subject to the umpire's instructions.",
+      "<strong>Service & Ball Release Rule:</strong> The server must release the ball at least <strong>16 cm vertically from the open palm</strong> when serving, as stated in the official TENEX league rulebook. Illegal service will receive warnings and point penalties.",
+      "<strong>Faults & Strokes:</strong> A double touch by the same player during a stroke is treated as a fault, and a point is awarded to the opponent.",
+      "<strong>Doubles Regulations:</strong> Serve must travel diagonally from server's right half-court to receiver's right half-court. Partners must take turns striking the ball during a rally. Strict serving and receiving order must be followed.",
+      "<strong>Tournament Structure & Qualification:</strong> Categories organized into pools, knockout rounds, or a combination. Top performers from pools advance to quarter-finals and playoffs.",
+      "<strong>Equipment & Conduct:</strong> Players should bring their own racket and wear suitable sportswear and non-marking footwear. All umpire and referee decisions on match play are final."
+    ],
+    schedule: [
+      { date: "20 Oct - 06 Nov", time: "08:00 AM - 06:00 PM", stage: "Day League Matches (College Premises)", court: "College Premises", status: "upcoming" },
+      { date: "20 Oct - 06 Nov", time: "08:00 PM - 11:00 PM", stage: "Night Clashes & Knockouts (Hostel TT Hall)", court: "Hostel TT Hall", status: "upcoming" },
+      { date: "06 Nov", time: "Evening Slots", stage: "Singles & Doubles Grand Championship Finals", court: "College TT Arena", status: "upcoming" }
+    ],
+    fixtures: [],
     coordinators: [
       { name: "Bhavya Prajapati", role: "Secretary (Sec)", phone: "+91 83294 55093", email: "202451033@iiitvadodara.ac.in" },
       { name: "Akshat Chhabra", role: "Joint Secretary (Jsec)", phone: "+91 70503 57190", email: "20251504007@iiitvadodara.ac.in" }
     ]
-  }
+  },
 };

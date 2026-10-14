@@ -34,10 +34,62 @@
       </ul>
       <div class="nav-actions">
         <a href="#qr-section" class="btn btn-secondary btn-sm">📱 Poster QR</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5lMwsnbUFTXZCduRMI1rZWZ6vtXhSZDVPm-ueJRLggqsqYQ/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge" style="background: #14b8a6;">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Page Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="#schedule">📅 Schedule & Timings</a></li>
+          <li><a href="#rules">📜 Rules & Regulations</a></li>
+          <li><a href="#coordinators">👥 Student Coordinators</a></li>
+          <li><a href="#qr-section">📱 Scan / Poster QR</a></li>
+          <li><a href="qr-codes.html">🖨️ QR Distribution Hub</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Browse Other Sports</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for Table Tennis</a>
+        
+        <a href="assets/docs/table-tennis-rulebook.pdf" download="table-tennis-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Sport Hero Banner -->
   <header class="sport-hero">
@@ -48,26 +100,29 @@
             <span>🏓</span> Racquet Sport • Ventura 2026-27
           </div>
           <h1>Table Tennis Championship</h1>
-          <p class="sport-tagline">Spin, speed and split-second smashes on the green table</p>
+          <p class="sport-tagline">Official TENEX Championship • Best of 3 Games to 11 Points • 5 Categories</p>
           
           <div style="margin: 1.25rem 0;">
-            <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Men's Singles Championship</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Women's Singles Championship</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Open Doubles Tournament</span>
+            <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Men's Singles</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Men's Doubles</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Women's Singles</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Women's Doubles</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Mixed Doubles (1 Male & 1 Female)</span>
           </div>
 
           <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-            <div>📍 <strong>Venue:</strong> College Premises (8 AM - 6 PM) & Hostel (8 PM - 11 PM)</div>
-            <div>📅 <strong>Dates:</strong> 20 Oct to 6 Nov</div>
-            <div>⏰ <strong>Timings:</strong> 8:00 AM – 6:00 PM in College | 8:00 PM – 11:00 PM in Hostel</div>
+            <div>📍 <strong>Venue:</strong> College Premises & Hostel TT Hall</div>
+            <div>📅 <strong>Dates:</strong> 20th Oct – 06th Nov</div>
+            <div>⏰ <strong>Timings:</strong> Day (8:00 AM - 6:00 PM) & Night (8:00 PM - 11:00 PM)</div>
           </div>
         </div>
 
         <div class="sport-hero-actions">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5lMwsnbUFTXZCduRMI1rZWZ6vtXhSZDVPm-ueJRLggqsqYQ/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
               📝 Register Team (Google Form)
             </a>
           
-          <a href="#rules" class="btn btn-secondary btn-lg" style="width: 100%;">
-            📋 View Rulebook
+          <a href="assets/docs/table-tennis-rulebook.pdf" download="table-tennis-rulebook.pdf" target="_blank" class="btn btn-secondary btn-lg" style="width: 100%; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25);">
+            📥 Download Rulebook (PDF)
+          </a>
+          <a href="#rules" class="btn btn-secondary btn-sm" style="width: 100%; border-style: dashed; font-size: 0.82rem;">
+            📋 View On-Page Rules
           </a>
           
           <button class="btn btn-secondary btn-print-poster" style="width: 100%;">
@@ -107,7 +162,7 @@
       <div class="timeline-item">
         <div class="timeline-time">08:00 AM - 06:00 PM</div>
         <div class="timeline-desc">
-          <h5>Day Matches (College Premises)</h5>
+          <h5>Day League Matches (College Premises)</h5>
           <span>📍 College Premises • 20 Oct - 06 Nov</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
@@ -117,7 +172,7 @@
       <div class="timeline-item">
         <div class="timeline-time">08:00 PM - 11:00 PM</div>
         <div class="timeline-desc">
-          <h5>Night Matches (Hostel TT Hall)</h5>
+          <h5>Night Clashes & Knockouts (Hostel TT Hall)</h5>
           <span>📍 Hostel TT Hall • 20 Oct - 06 Nov</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
@@ -127,7 +182,7 @@
       <div class="timeline-item">
         <div class="timeline-time">Evening Slots</div>
         <div class="timeline-desc">
-          <h5>Singles & Doubles Grand Finals</h5>
+          <h5>Singles & Doubles Grand Championship Finals</h5>
           <span>📍 College TT Arena • 06 Nov</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
@@ -145,26 +200,58 @@
               Participants must abide by the collegiate sports code of conduct.
             </p>
             <ul class="rules-list">
-              <li>Venues: College Premises (8 AM - 6 PM) and Hostel Hall (8 PM - 11 PM).</li>
-<li>Stag 3-star 40+ seamless plastic balls will be used for all official ties.</li>
-<li>Service toss must be at least 16 cm vertically upwards from open palm.</li>
-<li>All matches: Best of 5 games (11 points per game; 2-point lead required to win).</li>
-<li>Expedite system will be introduced if a game remains unfinished after 10 minutes.</li>
-<li>Players must use ITTF-approved rubbers (Red and Black on opposite sides).</li>
+              <li><strong>Tournament Categories:</strong> Men's Singles, Men's Doubles, Women's Singles, Women's Doubles, and Mixed Doubles (each pair must consist of one male and one female participant).</li>
+<li><strong>Match Format:</strong> Every match will be played as <strong>best of 3 games</strong>, with each game played to <strong>11 points</strong>. The player or pair that wins 2 games wins the match. At 10–10 (deuce), the game continues until one player or pair leads by 2 points.</li>
+<li><strong>Pre-Match Protocol:</strong> Toss conducted by umpire/referee decides initial serve/receive and playing side. A 5-minute warm-up is allowed before play begins. Players must report at least 10 minutes prior.</li>
+<li><strong>Grace Period & Walkovers:</strong> A 10-minute grace period is allowed for late arrivals. If a player/pair fails to arrive within 10 minutes, the opponent is awarded a <strong>walkover victory</strong>.</li>
+<li><strong>Time-Outs:</strong> Each player/pair may request up to two time-outs during a match, subject to the umpire's instructions.</li>
+<li><strong>Service & Ball Release Rule:</strong> The server must release the ball at least <strong>16 cm vertically from the open palm</strong> when serving, as stated in the official TENEX league rulebook. Illegal service will receive warnings and point penalties.</li>
+<li><strong>Faults & Strokes:</strong> A double touch by the same player during a stroke is treated as a fault, and a point is awarded to the opponent.</li>
+<li><strong>Doubles Regulations:</strong> Serve must travel diagonally from server's right half-court to receiver's right half-court. Partners must take turns striking the ball during a rally. Strict serving and receiving order must be followed.</li>
+<li><strong>Tournament Structure & Qualification:</strong> Categories organized into pools, knockout rounds, or a combination. Top performers from pools advance to quarter-finals and playoffs.</li>
+<li><strong>Equipment & Conduct:</strong> Players should bring their own racket and wear suitable sportswear and non-marking footwear. All umpire and referee decisions on match play are final.</li>
             </ul>
             
             
             
             
             
+            
+            
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
+              <h4 style="color: #2dd4bf; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>🏓</span> TENEX Table Tennis Championship Rules
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Official Best of 3 Games to 11 Points • 5 Categories • 16 cm Vertical Service Rule.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem;">
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #2dd4bf;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Match Structure</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Best of 3 games to 11 points (first to 2).<br>• Deuce at 10-10 requires 2-point lead.<br>• Up to 2 time-outs per match.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #06b6d4;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. 16cm Service & Play</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Ball released min 16cm vertically from open palm.<br>• Double touch = fault (point to opponent).<br>• 10-min grace period before walkover.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #3b82f6;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Doubles & Mixed</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Diagonal serve (right-to-right).<br>• Alternating hits by teammates during rally.<br>• Non-marking shoes & own racket.</p>
+                </div>
+              </div>
+            </div>
+  
 
             
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
               <div>
-                <strong style="display: block;">Need the complete official Rulebook?</strong>
-                <span style="font-size: 0.82rem; color: var(--text-muted);">Download the signed PDF document with full bylaws and bracket diagrams.</span>
+                <strong style="display: block; color: #fff; font-size: 0.95rem;">✅ Official Signed Rulebook Available</strong>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Download the official PDF document with complete bylaws, format breakdown, and committee sign-off.</span>
               </div>
-              <a href="#" class="btn btn-secondary btn-sm" onclick="alert('Rulebook PDF link will be updated with final faculty signature before event.'); return false;">📥 Download PDF</a>
+              <div style="display: flex; gap: 8px;">
+                <a href="assets/docs/table-tennis-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm">👁️ View PDF</a>
+                <a href="assets/docs/table-tennis-rulebook.pdf" download="table-tennis-rulebook.pdf" class="btn btn-primary btn-sm">📥 Download Rulebook (PDF)</a>
+              </div>
             </div>
             
           </div>
@@ -304,11 +391,11 @@
         <div class="card-box">
           <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">📍 Venue Quick Guide</h4>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-            <strong>Location:</strong> College Premises (8 AM - 6 PM) & Hostel (8 PM - 11 PM)<br>
+            <strong>Location:</strong> College Premises & Hostel TT Hall<br>
             <strong>Registration Deadline:</strong> Registration Open<br>
             <strong>Equipment:</strong> Provided by Institute Sports Council.
           </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5lMwsnbUFTXZCduRMI1rZWZ6vtXhSZDVPm-ueJRLggqsqYQ/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">Submit Team Entry</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">Submit Team Entry</a>
         </div>
 
       </aside>
@@ -360,6 +447,9 @@
     <a href="#coordinators"><span>👥</span> Contact</a>
     <a href="#qr-section"><span>📱</span> QR</a>
   </div>
+
+
+  
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>

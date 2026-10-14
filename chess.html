@@ -12,7 +12,7 @@
 
   <!-- Ambient background glow -->
   <div class="bg-mesh">
-    <div class="mesh-blob blob-1" style="background: #8b5cf6;"></div>
+    <div class="mesh-blob blob-1" style="background: #a855f7;"></div>
     <div class="mesh-blob blob-2"></div>
   </div>
 
@@ -20,7 +20,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="brand-link">
-        <div class="brand-logo-badge" style="background: #8b5cf6;">V</div>
+        <div class="brand-logo-badge" style="background: #a855f7;">V</div>
         <div class="brand-text">
           <h1>VENTURA <span>IIIT Vadodara</span></h1>
         </div>
@@ -34,40 +34,95 @@
       </ul>
       <div class="nav-actions">
         <a href="#qr-section" class="btn btn-secondary btn-sm">📱 Poster QR</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQcpJ2ybJvl2K78HVP7WCsAuNovzBY3embcvi8Q7YV-SdfSw/viewform?usp=header" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge" style="background: #a855f7;">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Page Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="#schedule">📅 Schedule & Timings</a></li>
+          <li><a href="#rules">📜 Rules & Regulations</a></li>
+          <li><a href="#coordinators">👥 Student Coordinators</a></li>
+          <li><a href="#qr-section">📱 Scan / Poster QR</a></li>
+          <li><a href="qr-codes.html">🖨️ QR Distribution Hub</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Browse Other Sports</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for Chess</a>
+        
+        <a href="assets/docs/chess-rulebook.pdf" download="chess-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Sport Hero Banner -->
   <header class="sport-hero">
     <div class="container">
       <div class="sport-hero-content">
         <div class="sport-title-block">
-          <div class="hero-pill" style="border-color: #8b5cf6; color: #fff; background: rgba(255,255,255,0.06);">
+          <div class="hero-pill" style="border-color: #a855f7; color: #fff; background: rgba(255,255,255,0.06);">
             <span>♟️</span> Mind Sport • Ventura 2026-27
           </div>
           <h1>Chess Championship</h1>
-          <p class="sport-tagline">The battle of wits, grand tactics and supreme minds</p>
+          <p class="sport-tagline">Single-Elimination Knockout • 10+0 Rapid • Armageddon Tiebreak</p>
           
           <div style="margin: 1.25rem 0;">
-            <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Hybrid Swiss Open Rounds</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Courtyard Offline Arena</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Blitz & Rapid Knockouts</span>
+            <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Offline Mode (Physical Board at Venue)</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Online Mode (Chess.com Verified)</span> <span style="display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; margin: 3px;">Single-Elimination Rapid Knockout (10+0)</span>
           </div>
 
           <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-            <div>📍 <strong>Venue:</strong> Online & Offline (Courtyard) Hybrid</div>
-            <div>📅 <strong>Dates:</strong> 19th October to 6th November</div>
-            <div>⏰ <strong>Timings:</strong> During Lunch hours & Hostels in evenings</div>
+            <div>📍 <strong>Venue:</strong> Institute Premises (Courtyard) & Chess.com Hybrid</div>
+            <div>📅 <strong>Dates:</strong> Registration Till 18th Oct | Matches from 19th Oct</div>
+            <div>⏰ <strong>Timings:</strong> Scheduled Slots (10+0 Rapid Matches)</div>
           </div>
         </div>
 
         <div class="sport-hero-actions">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScQcpJ2ybJvl2K78HVP7WCsAuNovzBY3embcvi8Q7YV-SdfSw/viewform?usp=header" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-lg" style="width: 100%;">
               📝 Register Team (Google Form)
             </a>
           
-          <a href="#rules" class="btn btn-secondary btn-lg" style="width: 100%;">
-            📋 View Rulebook
+          <a href="assets/docs/chess-rulebook.pdf" download="chess-rulebook.pdf" target="_blank" class="btn btn-secondary btn-lg" style="width: 100%; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25);">
+            📥 Download Rulebook (PDF)
+          </a>
+          <a href="#rules" class="btn btn-secondary btn-sm" style="width: 100%; border-style: dashed; font-size: 0.82rem;">
+            📋 View On-Page Rules
           </a>
           
           <button class="btn btn-secondary btn-print-poster" style="width: 100%;">
@@ -105,20 +160,30 @@
             <div class="timeline">
               
       <div class="timeline-item">
-        <div class="timeline-time">Lunch Hours</div>
+        <div class="timeline-time">Midnight</div>
         <div class="timeline-desc">
-          <h5>Courtyard In-Person Rounds</h5>
-          <span>📍 Campus Courtyard • 19 Oct - 06 Nov</span>
+          <h5>Online Registration Deadline & Bracket Generation</h5>
+          <span>📍 Online Portal • 18 Oct</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
       </div>
     
 
       <div class="timeline-item">
-        <div class="timeline-time">Evenings</div>
+        <div class="timeline-time">Scheduled Slots</div>
         <div class="timeline-desc">
-          <h5>Hostel & Online Evening Matches</h5>
-          <span>📍 Online / Hostels • 19 Oct - 06 Nov</span>
+          <h5>Knockout Rounds (10+0 Rapid Single Games)</h5>
+          <span>📍 Courtyard & Chess.com • 19 Oct - 04 Nov</span>
+        </div>
+        <div><span class="sport-card-badge">Upcoming</span></div>
+      </div>
+    
+
+      <div class="timeline-item">
+        <div class="timeline-time">Evening Slot</div>
+        <div class="timeline-desc">
+          <h5>Quarter-Finals & Semi-Finals (10+0 + Armageddon)</h5>
+          <span>📍 Courtyard Arena • 05 Nov</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
       </div>
@@ -127,7 +192,7 @@
       <div class="timeline-item">
         <div class="timeline-time">Finals Slot</div>
         <div class="timeline-desc">
-          <h5>Grand Championship Finals & Blitz Showdown</h5>
+          <h5>Grand Championship Final (Offline Physical Board)</h5>
           <span>📍 Courtyard Arena • 06 Nov</span>
         </div>
         <div><span class="sport-card-badge">Upcoming</span></div>
@@ -145,26 +210,58 @@
               Participants must abide by the collegiate sports code of conduct.
             </p>
             <ul class="rules-list">
-              <li>Hybrid tournament format: Matches played Online & Offline (Courtyard).</li>
-<li>Scheduled daily during lunch hours on campus and in hostels during the evening.</li>
-<li>Time controls and pairing announcements managed via official tournament links.</li>
-<li>FIDE Rapid & Blitz rules apply with fair play monitoring for online games.</li>
-<li>Touch-move rule strictly observed for in-person courtyard boards.</li>
-<li>Arbiters' decisions on illegal moves and clock discrepancies are final.</li>
+              <li><strong>Registration & Entry:</strong> Online registration. Registration deadline is <strong>18th October 2026</strong>. Participation fee is <strong>₹20/- per player</strong> (Individual entry). At registration, every player must choose their mode: <strong>Offline</strong> (physical board at venue) or <strong>Online</strong> (on Chess.com with correct username and college email id).</li>
+<li><strong>Tournament Format:</strong> Single-elimination knockout (winner advances, loser is eliminated). Random draw bracket with power of 2 sizing (empty slots filled with byes in Round 1 only, distributed evenly). Rounds proceed from Round 1, Round 2 to Quarter-Finals, Semi-Finals, and the Final.</li>
+<li><strong>Championship Grand Final:</strong> The Final will strictly be played <strong>offline on a physical board</strong> in front of the organizing committee.</li>
+<li><strong>Game Rules & Time Control:</strong> Each match is a single game of chess. Time control is <strong>10 minutes per player with no increment (10+0)</strong>. Colors decided by committee or coin toss. Official FIDE rules apply.</li>
+<li><strong>Touch-Move Rule:</strong> Strict touch-move applies in all offline matches: a piece touched must be moved, and a piece released on a square must stay there.</li>
+<li><strong>Draw & Armageddon Tiebreak:</strong> Draws by agreement are allowed only after move 20 (before that requires arbiter approval). A drawn game is settled immediately by an <strong>Armageddon game</strong>: colors swapped, White gets 5 minutes and Black gets 4 minutes (no increment). If Armageddon is drawn, <strong>Black wins the match</strong>.</li>
+<li><strong>Offline Match Conditions:</strong> Boards, pieces, and digital clocks provided by committee. Players must report to table at scheduled time. More than <strong>5 minutes late = forfeit</strong>. Mobile phones must be switched off and kept away.</li>
+<li><strong>Online Match Conditions:</strong> Played on Chess.com. Designated player creates unrated 10+0 challenge. More than 5 minutes late = forfeit. Winner sends game link/screenshot immediately. <strong>Chess engines or outside assistance strictly prohibited</strong> (cheating leads to immediate disqualification).</li>
+<li><strong>Online vs Offline Matchups:</strong> If players chose the same mode, match played in that mode. If chosen modes differ, the committee decides the mode and informs both players in advance.</li>
+<li><strong>Arbiter & Authority:</strong> The arbiter's decision is final. Misconduct, abusive behavior, or arguing with the arbiter can lead to game loss or disqualification.</li>
             </ul>
             
             
             
             
             
+            
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
+              <h4 style="color: #c084fc; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+                <span>♟️</span> Single-Elimination Knockout & Rapid Format
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Official 10+0 Time Control, Touch-Move Offline, and Instant Armageddon Tiebreaks.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1rem;">
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #c084fc;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. 10+0 Rapid Control</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Single game per match.<br>• 10 mins per player (no increment).<br>• Touch-move strictly enforced offline.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #e879f9;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Armageddon Tiebreak</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Played immediately if drawn.<br>• White gets 5 mins, Black gets 4 mins.<br>• If draw, <strong>Black wins match</strong>.</p>
+                </div>
+                <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #38bdf8;">
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Offline Final Board</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Hybrid rounds on Courtyard & Chess.com.<br>• Grand Final strictly offline on physical board.<br>• 5-min grace period before forfeit.</p>
+                </div>
+              </div>
+            </div>
+  
+            
 
             
-            <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;">
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
               <div>
-                <strong style="display: block;">Need the complete official Rulebook?</strong>
-                <span style="font-size: 0.82rem; color: var(--text-muted);">Download the signed PDF document with full bylaws and bracket diagrams.</span>
+                <strong style="display: block; color: #fff; font-size: 0.95rem;">✅ Official Signed Rulebook Available</strong>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Download the official PDF document with complete bylaws, format breakdown, and committee sign-off.</span>
               </div>
-              <a href="#" class="btn btn-secondary btn-sm" onclick="alert('Rulebook PDF link will be updated with final faculty signature before event.'); return false;">📥 Download PDF</a>
+              <div style="display: flex; gap: 8px;">
+                <a href="assets/docs/chess-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm">👁️ View PDF</a>
+                <a href="assets/docs/chess-rulebook.pdf" download="chess-rulebook.pdf" class="btn btn-primary btn-sm">📥 Download Rulebook (PDF)</a>
+              </div>
             </div>
             
           </div>
@@ -260,11 +357,11 @@
         <div class="card-box">
           <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">📍 Venue Quick Guide</h4>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-            <strong>Location:</strong> Online & Offline (Courtyard) Hybrid<br>
-            <strong>Registration Deadline:</strong> Registration Open<br>
+            <strong>Location:</strong> Institute Premises (Courtyard) & Chess.com Hybrid<br>
+            <strong>Registration Deadline:</strong> 18th October 2026<br>
             <strong>Equipment:</strong> Provided by Institute Sports Council.
           </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScQcpJ2ybJvl2K78HVP7WCsAuNovzBY3embcvi8Q7YV-SdfSw/viewform?usp=header" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">Submit Team Entry</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-0iBf2xU76_W-y5L9u8d9j0-B7zL6v7-F5_N0-e8_y1-jQ/viewform" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">Submit Team Entry</a>
         </div>
 
       </aside>
@@ -316,6 +413,9 @@
     <a href="#coordinators"><span>👥</span> Contact</a>
     <a href="#qr-section"><span>📱</span> QR</a>
   </div>
+
+
+  
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>

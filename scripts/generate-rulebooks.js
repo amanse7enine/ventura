@@ -1238,6 +1238,350 @@ const athleticsHtml = `<!DOCTYPE html>
 </html>
 `;
 
+
+// 7. Chess Rulebook HTML
+const chessHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventura 2k26 - Official Chess Tournament Rulebook | IIIT Vadodara</title>
+  <style>
+    @page { size: A4; margin: 16mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      border-bottom: 2px solid #a855f7;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header-title h1 {
+      font-size: 20px;
+      margin: 0 0 2px 0;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .header-title p {
+      margin: 0;
+      font-size: 11px;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge {
+      background: #faf5ff;
+      color: #7e22ce;
+      border: 1px solid #e9d5ff;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+    h2 {
+      font-size: 14px;
+      color: #0f172a;
+      border-left: 3px solid #a855f7;
+      padding-left: 8px;
+      margin: 14px 0 6px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    p { margin: 4px 0 8px 0; }
+    ul, ol { margin: 4px 0 10px 0; padding-left: 18px; }
+    li { margin-bottom: 4px; }
+    .grid-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .grid-table th, .grid-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .grid-table th {
+      background: #faf5ff;
+      color: #7e22ce;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .sign-row {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-title">
+      <h1>RULES FOR VENTURA 2026 CHESS TOURNAMENT</h1>
+      <p>Annual Sports Meet • IIIT Vadodara • Ventura 2k26</p>
+    </div>
+    <div class="badge">Official Rapid Knockout Draft</div>
+  </div>
+
+  <h2>1. Registration Rules</h2>
+  <ul>
+    <li>Registrations will be online.</li>
+    <li><strong>Registration deadline:</strong> 18th October 2026.</li>
+    <li><strong>Participation fee:</strong> Rs. 20/-</li>
+    <li>Entry is individual. One player per entry.</li>
+    <li>At registration, every player must choose the mode: <strong>Offline</strong> (physical board at venue) or <strong>Online</strong> (on Chess.com).</li>
+    <li>Online players must provide their correct Chess.com username at registration and use only their college email id.</li>
+  </ul>
+
+  <h2>2. Tournament Format</h2>
+  <ul>
+    <li>The tournament is a <strong>single-elimination knockout</strong>. The winner of a match advances; the loser is out.</li>
+    <li>The bracket will be drawn randomly by the committee after registration closes.</li>
+    <li>The bracket size will be the next power of 2 above the number of players (empty slots filled with byes).</li>
+    <li>Byes will be given only in Round 1 and distributed evenly across the bracket. No player gets a bye twice.</li>
+    <li>Rounds proceed from Round 1, Round 2 to Quarter-Finals, Semi-Finals, and the Final.</li>
+    <li>The <strong>Final will be played offline on a physical board</strong> in front of the committee.</li>
+  </ul>
+
+  <h2>3. Game's Rules & Regulation</h2>
+  <ul>
+    <li>Each match is a single game of chess.</li>
+    <li><strong>Time control:</strong> 10 minutes per player with no increment (<strong>10+0</strong>).</li>
+    <li>Colors for each match decided by committee or coin toss. All official FIDE rules apply.</li>
+    <li><strong>Touch-move rule</strong> applies in offline matches: a piece touched must be moved; released piece must stay.</li>
+    <li>The arbiter's decision will be final. Misconduct or arguing with arbiter leads to game loss or disqualification.</li>
+  </ul>
+
+  <h2>4. Draw and Tiebreak Rules (Armageddon)</h2>
+  <div class="highlight-box">
+    <strong>Armageddon Game:</strong> A drawn game will be settled by an Armageddon game played immediately. In Armageddon, colors are swapped. <strong>White gets 5 minutes and Black gets 4 minutes</strong>, with no increment. If the Armageddon game is drawn, <strong>Black wins the match</strong>.
+  </div>
+  <p>Draws by agreement are allowed only after move 20. Before that, the draw must be approved by the arbiter.</p>
+
+  <h2>5. Offline & Online Playing Conditions</h2>
+  <ul>
+    <li><strong>Offline Matches:</strong> Boards, pieces, and digital clocks provided by committee. Players must report to table at announced time (more than 5 minutes late loses by forfeit). Mobile phones must be switched off and kept away. Spectators must stay silent.</li>
+    <li><strong>Online Matches:</strong> Played on Chess.com. Opponents paired by username; designated player creates 10+0 unrated challenge. More than 5 minutes late loses by forfeit. Winner submits game link/screenshot immediately. <strong>Use of chess engines, databases, or outside assistance strictly prohibited</strong> (disqualification for cheating).</li>
+    <li><strong>Matches Between Online and Offline Players:</strong> If chosen modes differ, the committee decides the mode and informs both players in advance.</li>
+    <li><strong>No-Show:</strong> Opponent wins by walkover if a player fails to appear. Players not playing due to committee error will receive a fee refund.</li>
+  </ul>
+
+  <div class="sign-row">
+    <div>
+      <strong>Aahan Poddar</strong><br>
+      Secretary, Chess<br>
+      📞 +91 99580 30019
+    </div>
+    <div>
+      <strong>Ritika Meena</strong><br>
+      Joint Secretary, Chess<br>
+      📞 +91 72969 14433
+    </div>
+    <div>
+      <strong>Aman</strong><br>
+      Secretary, Sports Committee<br>
+      📞 83185 67785
+    </div>
+  </div>
+
+</body>
+</html>
+`;
+
+
+// 8. Table Tennis Rulebook HTML
+const tableTennisHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventura 2k26 - Official Table Tennis Rulebook | IIIT Vadodara</title>
+  <style>
+    @page { size: A4; margin: 16mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      border-bottom: 2px solid #14b8a6;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header-title h1 {
+      font-size: 20px;
+      margin: 0 0 2px 0;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .header-title p {
+      margin: 0;
+      font-size: 11px;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge {
+      background: #f0fdfa;
+      color: #0f766e;
+      border: 1px solid #ccfbf1;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+    h2 {
+      font-size: 14px;
+      color: #0f172a;
+      border-left: 3px solid #14b8a6;
+      padding-left: 8px;
+      margin: 14px 0 6px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    p { margin: 4px 0 8px 0; }
+    ul, ol { margin: 4px 0 10px 0; padding-left: 18px; }
+    li { margin-bottom: 4px; }
+    .grid-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .grid-table th, .grid-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .grid-table th {
+      background: #f0fdfa;
+      color: #0f766e;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: #f0fdfa;
+      border: 1px solid #ccfbf1;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .sign-row {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-title">
+      <h1>VENTURA 2K26 — TABLE TENNIS RULEBOOK</h1>
+      <p>Annual Sports Meet • IIIT Vadodara (TENEX Leagues)</p>
+    </div>
+    <div class="badge">Official Tournament Draft</div>
+  </div>
+
+  <h2>1. Tournament Categories</h2>
+  <ul>
+    <li><strong>Men's Singles:</strong> Individual event for male participants.</li>
+    <li><strong>Men's Doubles:</strong> Event for pairs of male participants.</li>
+    <li><strong>Women's Singles:</strong> Individual event for female participants.</li>
+    <li><strong>Women's Doubles:</strong> Event for pairs of female participants.</li>
+    <li><strong>Mixed Doubles:</strong> Each pair must consist of one male and one female participant.</li>
+  </ul>
+
+  <h2>2. Match Rules & Format</h2>
+  <ul>
+    <li>Every match will be played as <strong>best of 3 games</strong>, with each game played to <strong>11 points</strong>. The player or pair that wins 2 games wins the match.</li>
+    <li>At 10–10, the game will continue until one player or pair leads by 2 points.</li>
+    <li>Before the match, the umpire/referee will conduct a toss to decide the initial serve/receive and playing side.</li>
+    <li>A 5-minute warm-up will be allowed before the match begins.</li>
+    <li>Players must report to the playing area at least 10 minutes before their scheduled match.</li>
+    <li><strong>Grace Period:</strong> A 10-minute grace period is allowed. If still not arrived, the opponent is declared winner by walkover.</li>
+    <li>Each player may request up to two time-outs during a match.</li>
+  </ul>
+
+  <h2>3. Service & Play</h2>
+  <div class="highlight-box">
+    <strong>16 cm Service Rule:</strong> The server must release the ball at least <strong>16 cm vertically from the open palm</strong> when serving, as stated in the supplied TENEX league rulebook. Illegal service will receive umpire warnings and point penalties.
+  </div>
+  <ul>
+    <li>A double touch by the same player during a stroke will be treated as a fault (point awarded to opponent).</li>
+    <li>The umpire/referee's decision on match play will be final.</li>
+  </ul>
+
+  <h2>4. Doubles-Specific Rules</h2>
+  <ul>
+    <li>In doubles, the serve must travel <strong>diagonally from server's right half-court to receiver's right half-court</strong>.</li>
+    <li>Partners must take turns striking the ball during a rally.</li>
+    <li>The serving and receiving order must be followed throughout the game.</li>
+  </ul>
+
+  <h2>5. Player Conduct & Organization</h2>
+  <ul>
+    <li>Participants must treat opponents, officials, and volunteers respectfully. Unsporting behaviour leads to penalties or disqualification.</li>
+    <li>Players should bring their own racket and wear suitable sportswear and footwear.</li>
+    <li>Fixtures and match timings will be shared through the official TENEX WhatsApp group.</li>
+  </ul>
+
+  <div class="sign-row">
+    <div>
+      <strong>Bhavya Prajapati</strong><br>
+      Secretary, Table Tennis<br>
+      📞 +91 83294 55093
+    </div>
+    <div>
+      <strong>Akshat Chhabra</strong><br>
+      Joint Secretary, Table Tennis<br>
+      📞 +91 70503 57190
+    </div>
+    <div>
+      <strong>Aman</strong><br>
+      Secretary, Sports Committee<br>
+      📞 83185 67785
+    </div>
+  </div>
+
+</body>
+</html>
+`;
+
 // Write HTML rulebooks
 const cricketHtmlPath = path.join(docsDir, 'cricket-rulebook.html');
 const badmintonHtmlPath = path.join(docsDir, 'badminton-rulebook.html');
@@ -1251,7 +1595,11 @@ const footballHtmlPath = path.join(docsDir, 'football-rulebook.html');
 const athleticsHtmlPath = path.join(docsDir, 'athletics-rulebook.html');
 fs.writeFileSync(footballHtmlPath, footballHtml, 'utf8');
 fs.writeFileSync(athleticsHtmlPath, athleticsHtml, 'utf8');
-console.log('Saved cricket, badminton, volleyball, carrom, football, and athletics HTML rulebooks.');
+const chessHtmlPath = path.join(docsDir, 'chess-rulebook.html');
+const tableTennisHtmlPath = path.join(docsDir, 'table-tennis-rulebook.html');
+fs.writeFileSync(chessHtmlPath, chessHtml, 'utf8');
+fs.writeFileSync(tableTennisHtmlPath, tableTennisHtml, 'utf8');
+console.log('Saved cricket, badminton, volleyball, carrom, football, athletics, chess, and table-tennis HTML rulebooks.');
 
 // Compile to PDF using Edge headless
 const edgePath = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
@@ -1261,6 +1609,8 @@ const volleyballPdfPath = path.join(docsDir, 'volleyball-rulebook.pdf');
 const carromPdfPath = path.join(docsDir, 'carrom-rulebook.pdf');
 const footballPdfPath = path.join(docsDir, 'football-rulebook.pdf');
 const athleticsPdfPath = path.join(docsDir, 'athletics-rulebook.pdf');
+const chessPdfPath = path.join(docsDir, 'chess-rulebook.pdf');
+const tableTennisPdfPath = path.join(docsDir, 'table-tennis-rulebook.pdf');
 
 if (fs.existsSync(edgePath)) {
   try {
@@ -1310,6 +1660,23 @@ if (fs.existsSync(edgePath)) {
   } catch (e) {
     console.error('Error generating athletics PDF:', e.message);
   }
+
+  try {
+    console.log('Generating chess-rulebook.pdf via Edge headless...');
+    execSync(`"${edgePath}" --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="${chessPdfPath}" "file:///${chessHtmlPath.replace(/\\\\/g, '/')}"`);
+    console.log('Generated chess-rulebook.pdf successfully!');
+  } catch (e) {
+    console.error('Error generating chess PDF:', e.message);
+  }
+
+  try {
+    console.log('Generating table-tennis-rulebook.pdf via Edge headless...');
+    execSync(`"${edgePath}" --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="${tableTennisPdfPath}" "file:///${tableTennisHtmlPath.replace(/\\\\/g, '/')}"`);
+    console.log('Generated table-tennis-rulebook.pdf successfully!');
+  } catch (e) {
+    console.error('Error generating table-tennis PDF:', e.message);
+  }
+
 
 
 }

@@ -23,27 +23,78 @@
       <a href="index.html" class="brand-link">
         <div class="brand-logo-badge">V</div>
         <div class="brand-text">
-          <h1>VENTURA <span>IIIT Vadodara Sports</span></h1>
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="#sports" class="active">Sports (8)</a></li>
+        <li><a href="#sports">All Sports</a></li>
         <li><a href="#schedule">Schedule</a></li>
-        <li><a href="qr-codes.html">QR Code Hub 📱</a></li>
+        <li><a href="#rulebooks">Rulebooks (PDF) 📜</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="qr-codes.html">QR Code Hub 📱</a></li>
       </ul>
       <div class="nav-actions">
         <a href="qr-codes.html" class="btn btn-secondary btn-sm">Scan / QR Hub</a>
         <a href="#sports" class="btn btn-primary btn-sm">Register Team</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Main Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html" class="active">🏠 Home Portal</a></li>
+          <li><a href="#sports">🏅 All 8 Sports</a></li>
+          <li><a href="#schedule">📅 Schedule Overview</a></li>
+          <li><a href="#rulebooks">📜 Official Rulebooks (PDF)</a></li>
+          <li><a href="qr-codes.html">📱 QR Code Posters</a></li>
+          <li><a href="#contact">👥 Student Council Contact</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Quick Jump to Sport</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <a href="#sports" class="btn btn-primary" style="width: 100%;">📝 Register Team</a>
+        <a href="qr-codes.html" class="btn btn-secondary" style="width: 100%;">📱 Scan Poster QRs</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
       <div class="hero-pill">
-        <span>🏆</span> IIIT Vadodara Annual Sports Championship • 18th Oct – 6th Nov
+        <span>🏆</span> IIIT Vadodara Annual Sports Festival • 15th Oct – 6th Nov 2026
       </div>
       <h2>
         IGNITE THE SPIRIT <br>
@@ -55,7 +106,8 @@
 
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
         <a href="#sports" class="btn btn-primary btn-lg">Explore 8 Sports</a>
-        <a href="assets/images/ventura-poster.jpg" target="_blank" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.08); border-color: rgba(255,107,43,0.35);">🖼️ Official Poster (HD)</a>
+        <a href="assets/images/ventura-poster.jpg" target="_blank" class="btn btn-secondary btn-lg" style="background: #ffffff; border-color: rgba(32,169,214,0.4); color: var(--royal-blue);">🖼️ Official Poster (HD)</a>
+        <a href="#rulebooks" class="btn btn-gold btn-lg">📜 Official Rulebooks (PDF)</a>
         <a href="qr-codes.html" class="btn btn-secondary btn-lg">📱 Download All QR Codes</a>
       </div>
 
@@ -101,7 +153,7 @@
           <img src="assets/images/badminton-smash.jpg" alt="Badminton" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🏸</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Register by 15 Oct</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Register by 15 Oct</span>
         </div>
         <div class="sport-card-body">
           <h4>Badminton</h4>
@@ -114,8 +166,9 @@
               <span class="icon">📅</span> <span>18 & 20 Oct | After 2 PM / 6 PM</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="badminton.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="badminton.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/badminton-rulebook.pdf" download="badminton-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('badminton')">📱</button>
           </div>
         </div>
@@ -127,7 +180,7 @@
           <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=700&q=80" alt="Cricket" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🏏</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Cricket</h4>
@@ -140,8 +193,9 @@
               <span class="icon">📅</span> <span>24th & 31st Oct | 8 AM – 6 PM</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="cricket.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="cricket.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/cricket-rulebook.pdf" download="cricket-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('cricket')">📱</button>
           </div>
         </div>
@@ -153,7 +207,7 @@
           <img src="assets/images/real-champions-team.jpg" alt="Athletics" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🏃</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Athletics & Gym</h4>
@@ -166,8 +220,9 @@
               <span class="icon">📅</span> <span>Morning & Evening Sessions</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="athletics.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="athletics.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/athletics-rulebook.pdf" download="athletics-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('athletics')">📱</button>
           </div>
         </div>
@@ -179,7 +234,7 @@
           <img src="assets/images/real-football-team.jpg" alt="Football" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">⚽</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Football</h4>
@@ -192,8 +247,9 @@
               <span class="icon">📅</span> <span>25 Oct (8am-6pm) & 01 Nov (5pm-9pm)</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="football.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="football.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/football-rulebook.pdf" download="football-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('football')">📱</button>
           </div>
         </div>
@@ -205,7 +261,7 @@
           <img src="assets/images/real-trophy-winner.jpg" alt="Volleyball" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🏐</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Volleyball</h4>
@@ -218,8 +274,9 @@
               <span class="icon">📅</span> <span>19 Oct – 06 Nov | During Lunch Hours</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="volleyball.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="volleyball.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/volleyball-rulebook.pdf" download="volleyball-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('volleyball')">📱</button>
           </div>
         </div>
@@ -231,11 +288,11 @@
           <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=700&q=80" alt="Chess" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">♟️</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Chess</h4>
-          <p class="sport-card-tagline">Hybrid Online & Offline (Courtyard) rounds during lunch and hostel evenings.</p>
+          <p class="sport-card-tagline">Single-Elimination Knockout (10+0 Rapid) with Armageddon Tiebreak on Courtyard & Chess.com.</p>
           <div class="sport-card-meta">
             <div class="meta-row">
               <span class="icon">📍</span> <span>Online & Offline (Courtyard) Hybrid</span>
@@ -244,8 +301,9 @@
               <span class="icon">📅</span> <span>19 Oct – 06 Nov | Lunch & Evenings</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="chess.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="chess.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/chess-rulebook.pdf" download="chess-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('chess')">📱</button>
           </div>
         </div>
@@ -257,7 +315,7 @@
           <img src="assets/images/real-carrom.jpg" alt="Carrom" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🎯</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Carrom</h4>
@@ -270,8 +328,9 @@
               <span class="icon">📅</span> <span>From 20th Oct | 01:00 PM – 03:00 PM</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="carrom.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="carrom.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/carrom-rulebook.pdf" download="carrom-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('carrom')">📱</button>
           </div>
         </div>
@@ -283,11 +342,11 @@
           <img src="assets/images/real-table-tennis.jpg" alt="Table Tennis" class="sport-card-img">
           <div class="sport-card-overlay"></div>
           <div class="sport-card-icon">🏓</div>
-          <span class="sport-card-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Registration Open</span>
+          <span class="sport-card-badge" style="background: rgba(32, 169, 214, 0.12); color: var(--royal-blue); border-color: rgba(32, 169, 214, 0.35);">Registration Open</span>
         </div>
         <div class="sport-card-body">
           <h4>Table Tennis</h4>
-          <p class="sport-card-tagline">Singles & Doubles clashes in College (8 AM-6 PM) and Hostel (8 PM-11 PM).</p>
+          <p class="sport-card-tagline">Official TENEX Championship • Best of 3 Games to 11 Points across 5 Categories.</p>
           <div class="sport-card-meta">
             <div class="meta-row">
               <span class="icon">📍</span> <span>College Premises & Hostel TT Hall</span>
@@ -296,8 +355,9 @@
               <span class="icon">📅</span> <span>20 Oct – 06 Nov | Day & Night Slots</span>
             </div>
           </div>
-          <div class="sport-card-footer">
-            <a href="table-tennis.html" class="btn btn-primary btn-sm" style="width: 100%;">View Details & Schedule</a>
+          <div class="sport-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="table-tennis.html" class="btn btn-primary btn-sm" style="flex: 2; min-width: 120px;">Details & Schedule</a>
+            <a href="assets/docs/table-tennis-rulebook.pdf" download="table-tennis-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1; min-width: 80px;" title="Download Rulebook PDF">📥 PDF</a>
             <button class="btn-qr-quick" title="View QR Code" onclick="openSportQRModal('table-tennis')">📱</button>
           </div>
         </div>
@@ -371,6 +431,142 @@
   </section>
 
   <!-- Ventura Venue & Schedule Overview -->
+  
+  <!-- Official Rulebooks (PDF) Download Center -->
+  <section id="rulebooks" class="container" style="padding-top: 3.5rem; margin-bottom: 3.5rem;">
+    <div class="section-title">
+      <div>
+        <div class="hero-pill" style="margin-bottom: 0.6rem;">📜 Official Tournament Bylaws</div>
+        <h3>Download Official Rulebooks (PDF)</h3>
+        <p>Complete bylaws, match timings, equipment guidelines, and committee rules for all 8 sports.</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 1.25rem;">
+      
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🏸</span>
+            <span class="sport-card-badge">Singles & Doubles</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Badminton Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">Aloka Sports Academy rules, BWF 21-pt rally scoring & bus schedule.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/badminton-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/badminton-rulebook.pdf" download="badminton-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🏏</span>
+            <span class="sport-card-badge">T10 / T15 Format</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Cricket Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">Player auction, powerplay overs, super over & tie-break bylaws.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/cricket-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/cricket-rulebook.pdf" download="cricket-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">⚽</span>
+            <span class="sport-card-badge">11-A-Side League</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Football Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">8-team group stage, 20-min halves, penalty shootouts & discipline.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/football-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/football-rulebook.pdf" download="football-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🏐</span>
+            <span class="sport-card-badge">6v6 Inter-Batch</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Volleyball Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">FIVB rally system, rotation, net touch & 3-set championship format.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/volleyball-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/volleyball-rulebook.pdf" download="volleyball-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🏃</span>
+            <span class="sport-card-badge">Track, Gym & Tug</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Athletics Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">CRPF Ground tracks, timings, tug of war 2-pool best-of-3 rules.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/athletics-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/athletics-rulebook.pdf" download="athletics-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">♟️</span>
+            <span class="sport-card-badge">10+0 Rapid Knockout</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Chess Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">Official 10+0 Rapid, touch-move, Armageddon tiebreaks & offline final.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/chess-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/chess-rulebook.pdf" download="chess-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🏓</span>
+            <span class="sport-card-badge">TENEX 5 Categories</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Table Tennis Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">Best of 3 to 11 pts, 16cm vertical serve, doubles rotation rules.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/table-tennis-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/table-tennis-rulebook.pdf" download="table-tennis-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+      <div class="card-box" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <span style="font-size: 1.8rem;">🎯</span>
+            <span class="sport-card-badge">Singles & Doubles</span>
+          </div>
+          <h4 style="font-size: 1.2rem; color: var(--deep-navy); margin-bottom: 4px;">Carrom Rulebook</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 1.2rem;">All-India Carrom Fed rules, queen cover, foul penalties & board specs.</p>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <a href="assets/docs/carrom-rulebook.pdf" target="_blank" class="btn btn-secondary btn-sm" style="flex: 1;">👁️ View</a>
+          <a href="assets/docs/carrom-rulebook.pdf" download="carrom-rulebook.pdf" class="btn btn-primary btn-sm" style="flex: 2;">📥 Download PDF</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section id="schedule" class="container" style="margin-bottom: 4rem;">
     <div class="section-title">
       <div>

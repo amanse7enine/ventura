@@ -10,7 +10,7 @@
   <style>
     .qr-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
       gap: 1.75rem;
       margin-bottom: 4rem;
     }
@@ -19,19 +19,19 @@
       color: #0f172a;
       border-radius: var(--radius-lg);
       padding: 1.75rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       position: relative;
-      border: 2px solid transparent;
+      border: 1px solid var(--border-light);
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .poster-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-      border-color: var(--accent-orange);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-cyan);
     }
     .poster-college-header {
       font-size: 0.72rem;
@@ -52,7 +52,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #0f172a;
+      background: var(--gradient-athletic);
       color: #fff;
       padding: 6px 16px;
       border-radius: var(--radius-full);
@@ -119,20 +119,67 @@
       <a href="index.html" class="brand-link">
         <div class="brand-logo-badge">V</div>
         <div class="brand-text">
-          <h1>VENTURA <span>IIIT Vadodara Sports</span></h1>
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#sports">All 8 Sports</a></li>
-        <li><a href="qr-codes.html" class="active">QR Code Hub 📱</a></li>
+        <li><a href="index.html">← All Sports</a></li>
         <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="qr-codes.html" class="active">QR Hub 📱</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="btn btn-primary btn-sm btn-print-poster">🖨️ Print All Posters</button>
+        <button class="btn btn-primary btn-sm btn-print-poster">🖨️ Print Sheet</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Slide-out Drawer -->
+  <div class="nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-logo-badge">V</div>
+        <div class="brand-text">
+          <h1>VENTURA <span>IIIT Vadodara</span></h1>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <span class="drawer-label">Main Navigation</span>
+        <ul class="drawer-links">
+          <li><a href="index.html">🏠 Home Portal</a></li>
+          <li><a href="qr-codes.html" class="active">📱 QR Code Hub</a></li>
+          <li><a href="index.html#schedule">📅 Festival Schedule</a></li>
+          <li><a href="index.html#contact">👥 Council Contact</a></li>
+        </ul>
+      </div>
+      <div class="drawer-section">
+        <span class="drawer-label">Direct Sport Pages</span>
+        <div class="drawer-sports-grid">
+          <a href="cricket.html" class="drawer-sport-pill">🏏 Cricket</a>
+          <a href="football.html" class="drawer-sport-pill">⚽ Football</a>
+          <a href="badminton.html" class="drawer-sport-pill">🏸 Badminton</a>
+          <a href="volleyball.html" class="drawer-sport-pill">🏐 Volleyball</a>
+          <a href="athletics.html" class="drawer-sport-pill">🏃 Athletics</a>
+          <a href="chess.html" class="drawer-sport-pill">♟️ Chess</a>
+          <a href="table-tennis.html" class="drawer-sport-pill">🏓 Table Tennis</a>
+          <a href="carrom.html" class="drawer-sport-pill">🎯 Carrom</a>
+        </div>
+      </div>
+      <div class="drawer-actions">
+        <button class="btn btn-primary btn-print-poster" style="width: 100%;">🖨️ Print All Posters</button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
 
   <!-- Header Banner -->
   <header class="container" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
