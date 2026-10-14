@@ -494,9 +494,11 @@ function generateSportPage(sport) {
             <div class="gallery-grid">
               ${sport.gallery.map(g => `
                 <div class="gallery-card">
-                  <img src="${g.url}" alt="${g.caption}" loading="lazy">
-                  <div class="gallery-caption">${g.caption}</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="${g.url}" alt="${g.caption}" class="clickable-photo" data-caption="${g.caption}" loading="lazy">
+              </div>
+              <div class="gallery-caption">${g.caption}</div>
+            </div>
               `).join('')}
             </div>
           </div>
@@ -533,9 +535,11 @@ function generateSportPage(sport) {
           <div class="gallery-grid">
             ${sport.gallery.map(g => `
               <div class="gallery-card">
-                <img src="${g.url}" alt="${g.caption}" loading="lazy">
-                <div class="gallery-caption">${g.caption}</div>
+              <div class="gallery-card-img-wrap">
+                <img src="${g.url}" alt="${g.caption}" class="clickable-photo" data-caption="${g.caption}" loading="lazy">
               </div>
+              <div class="gallery-caption">${g.caption}</div>
+            </div>
             `).join('')}
           </div>
         </div>
@@ -632,6 +636,16 @@ function generateSportPage(sport) {
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Fullscreen Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Enlarged View" class="photo-lightbox-img" id="lightboxImg">
+      <div class="photo-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+  
 </body>
 </html>`;
 }

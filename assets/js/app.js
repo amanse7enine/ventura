@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPrintHandlers();
 
   initMobileNav();
+  initPhotoLightbox();
 });
 
 /**
@@ -165,5 +166,53 @@ function copyLinkToClipboard(text, triggerBtn) {
     }, 2000);
   }).catch(() => {
     prompt('Copy this link:', text);
+  });
+}
+
+
+/**
+ * Uncropped Photo Lightbox Viewer (Full Visibility on Phone, Laptop, TV)
+ */
+function initPhotoLightbox() {
+  const lightbox = document.getElementById('photoLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  if (!lightbox || !lightboxImg) return;
+
+  function openPhoto(src, caption) {
+    lightboxImg.src = src;
+    if (lightboxCaption) lightboxCaption.textContent = caption || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePhoto() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Attach to all sport-card images and gallery images
+  document.querySelectorAll('.sport-card-img, .clickable-photo, .gallery-card img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const caption = img.getAttribute('data-caption') || img.alt || '';
+      openPhoto(img.src, caption);
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closePhoto);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxImg.parentElement) {
+      closePhoto();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closePhoto();
+    }
   });
 }

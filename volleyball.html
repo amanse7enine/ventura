@@ -323,14 +323,18 @@
             <div class="gallery-grid">
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-trophy-winner.jpg" alt="Ventura Championship Trophy Winner" loading="lazy">
-                  <div class="gallery-caption">Ventura Championship Trophy Winner</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-trophy-winner.jpg" alt="Ventura Championship Trophy Winner" class="clickable-photo" data-caption="Ventura Championship Trophy Winner" loading="lazy">
+              </div>
+              <div class="gallery-caption">Ventura Championship Trophy Winner</div>
+            </div>
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Winners with Trophies" loading="lazy">
-                  <div class="gallery-caption">IIIT Vadodara Winners with Trophies</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Winners with Trophies" class="clickable-photo" data-caption="IIIT Vadodara Winners with Trophies" loading="lazy">
+              </div>
+              <div class="gallery-caption">IIIT Vadodara Winners with Trophies</div>
+            </div>
               
             </div>
           </div>
@@ -367,14 +371,18 @@
           <div class="gallery-grid">
             
               <div class="gallery-card">
-                <img src="assets/images/real-trophy-winner.jpg" alt="Ventura Championship Trophy Winner" loading="lazy">
-                <div class="gallery-caption">Ventura Championship Trophy Winner</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-trophy-winner.jpg" alt="Ventura Championship Trophy Winner" class="clickable-photo" data-caption="Ventura Championship Trophy Winner" loading="lazy">
               </div>
+              <div class="gallery-caption">Ventura Championship Trophy Winner</div>
+            </div>
             
               <div class="gallery-card">
-                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Winners with Trophies" loading="lazy">
-                <div class="gallery-caption">IIIT Vadodara Winners with Trophies</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Winners with Trophies" class="clickable-photo" data-caption="IIIT Vadodara Winners with Trophies" loading="lazy">
               </div>
+              <div class="gallery-caption">IIIT Vadodara Winners with Trophies</div>
+            </div>
             
           </div>
         </div>
@@ -472,5 +480,15 @@
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Fullscreen Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Enlarged View" class="photo-lightbox-img" id="lightboxImg">
+      <div class="photo-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+  
 </body>
 </html>

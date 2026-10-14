@@ -314,14 +314,18 @@
             <div class="gallery-grid">
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Champions with Trophies" loading="lazy">
-                  <div class="gallery-caption">IIIT Vadodara Champions with Trophies</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Champions with Trophies" class="clickable-photo" data-caption="IIIT Vadodara Champions with Trophies" loading="lazy">
+              </div>
+              <div class="gallery-caption">IIIT Vadodara Champions with Trophies</div>
+            </div>
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-trophy-winner.jpg" alt="Gold Trophy Champion Celebration on Field" loading="lazy">
-                  <div class="gallery-caption">Gold Trophy Champion Celebration on Field</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-trophy-winner.jpg" alt="Gold Trophy Champion Celebration on Field" class="clickable-photo" data-caption="Gold Trophy Champion Celebration on Field" loading="lazy">
+              </div>
+              <div class="gallery-caption">Gold Trophy Champion Celebration on Field</div>
+            </div>
               
             </div>
           </div>
@@ -358,14 +362,18 @@
           <div class="gallery-grid">
             
               <div class="gallery-card">
-                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Champions with Trophies" loading="lazy">
-                <div class="gallery-caption">IIIT Vadodara Champions with Trophies</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Champions with Trophies" class="clickable-photo" data-caption="IIIT Vadodara Champions with Trophies" loading="lazy">
               </div>
+              <div class="gallery-caption">IIIT Vadodara Champions with Trophies</div>
+            </div>
             
               <div class="gallery-card">
-                <img src="assets/images/real-trophy-winner.jpg" alt="Gold Trophy Champion Celebration on Field" loading="lazy">
-                <div class="gallery-caption">Gold Trophy Champion Celebration on Field</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-trophy-winner.jpg" alt="Gold Trophy Champion Celebration on Field" class="clickable-photo" data-caption="Gold Trophy Champion Celebration on Field" loading="lazy">
               </div>
+              <div class="gallery-caption">Gold Trophy Champion Celebration on Field</div>
+            </div>
             
           </div>
         </div>
@@ -469,5 +477,15 @@
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Fullscreen Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Enlarged View" class="photo-lightbox-img" id="lightboxImg">
+      <div class="photo-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -304,14 +304,18 @@
             <div class="gallery-grid">
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-table-tennis.jpg" alt="Table Tennis Matchplay at Campus Arena" loading="lazy">
-                  <div class="gallery-caption">Table Tennis Matchplay at Campus Arena</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-table-tennis.jpg" alt="Table Tennis Matchplay at Campus Arena" class="clickable-photo" data-caption="Table Tennis Matchplay at Campus Arena" loading="lazy">
+              </div>
+              <div class="gallery-caption">Table Tennis Matchplay at Campus Arena</div>
+            </div>
               
                 <div class="gallery-card">
-                  <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Championship Team" loading="lazy">
-                  <div class="gallery-caption">IIIT Vadodara Championship Team</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Championship Team" class="clickable-photo" data-caption="IIIT Vadodara Championship Team" loading="lazy">
+              </div>
+              <div class="gallery-caption">IIIT Vadodara Championship Team</div>
+            </div>
               
             </div>
           </div>
@@ -348,14 +352,18 @@
           <div class="gallery-grid">
             
               <div class="gallery-card">
-                <img src="assets/images/real-table-tennis.jpg" alt="Table Tennis Matchplay at Campus Arena" loading="lazy">
-                <div class="gallery-caption">Table Tennis Matchplay at Campus Arena</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-table-tennis.jpg" alt="Table Tennis Matchplay at Campus Arena" class="clickable-photo" data-caption="Table Tennis Matchplay at Campus Arena" loading="lazy">
               </div>
+              <div class="gallery-caption">Table Tennis Matchplay at Campus Arena</div>
+            </div>
             
               <div class="gallery-card">
-                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Championship Team" loading="lazy">
-                <div class="gallery-caption">IIIT Vadodara Championship Team</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/real-champions-team.jpg" alt="IIIT Vadodara Championship Team" class="clickable-photo" data-caption="IIIT Vadodara Championship Team" loading="lazy">
               </div>
+              <div class="gallery-caption">IIIT Vadodara Championship Team</div>
+            </div>
             
           </div>
         </div>
@@ -453,5 +461,15 @@
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Fullscreen Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Enlarged View" class="photo-lightbox-img" id="lightboxImg">
+      <div class="photo-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -303,19 +303,25 @@
             <div class="gallery-grid">
               
                 <div class="gallery-card">
-                  <img src="assets/images/badminton-smash.jpg" alt="Explosive Jump Smash on Indoor Wooden Court" loading="lazy">
-                  <div class="gallery-caption">Explosive Jump Smash on Indoor Wooden Court</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-smash.jpg" alt="Explosive Jump Smash on Indoor Wooden Court" class="clickable-photo" data-caption="Explosive Jump Smash on Indoor Wooden Court" loading="lazy">
+              </div>
+              <div class="gallery-caption">Explosive Jump Smash on Indoor Wooden Court</div>
+            </div>
               
                 <div class="gallery-card">
-                  <img src="assets/images/badminton-shuttle.jpg" alt="Tournament Shuttlecock & Professional Racquet Strings" loading="lazy">
-                  <div class="gallery-caption">Tournament Shuttlecock & Professional Racquet Strings</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-shuttle.jpg" alt="Tournament Shuttlecock & Professional Racquet Strings" class="clickable-photo" data-caption="Tournament Shuttlecock & Professional Racquet Strings" loading="lazy">
+              </div>
+              <div class="gallery-caption">Tournament Shuttlecock & Professional Racquet Strings</div>
+            </div>
               
                 <div class="gallery-card">
-                  <img src="assets/images/badminton-match.jpg" alt="Competitive Indoor Arena Matchplay Under Lights" loading="lazy">
-                  <div class="gallery-caption">Competitive Indoor Arena Matchplay Under Lights</div>
-                </div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-match.jpg" alt="Competitive Indoor Arena Matchplay Under Lights" class="clickable-photo" data-caption="Competitive Indoor Arena Matchplay Under Lights" loading="lazy">
+              </div>
+              <div class="gallery-caption">Competitive Indoor Arena Matchplay Under Lights</div>
+            </div>
               
             </div>
           </div>
@@ -352,19 +358,25 @@
           <div class="gallery-grid">
             
               <div class="gallery-card">
-                <img src="assets/images/badminton-smash.jpg" alt="Explosive Jump Smash on Indoor Wooden Court" loading="lazy">
-                <div class="gallery-caption">Explosive Jump Smash on Indoor Wooden Court</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-smash.jpg" alt="Explosive Jump Smash on Indoor Wooden Court" class="clickable-photo" data-caption="Explosive Jump Smash on Indoor Wooden Court" loading="lazy">
               </div>
+              <div class="gallery-caption">Explosive Jump Smash on Indoor Wooden Court</div>
+            </div>
             
               <div class="gallery-card">
-                <img src="assets/images/badminton-shuttle.jpg" alt="Tournament Shuttlecock & Professional Racquet Strings" loading="lazy">
-                <div class="gallery-caption">Tournament Shuttlecock & Professional Racquet Strings</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-shuttle.jpg" alt="Tournament Shuttlecock & Professional Racquet Strings" class="clickable-photo" data-caption="Tournament Shuttlecock & Professional Racquet Strings" loading="lazy">
               </div>
+              <div class="gallery-caption">Tournament Shuttlecock & Professional Racquet Strings</div>
+            </div>
             
               <div class="gallery-card">
-                <img src="assets/images/badminton-match.jpg" alt="Competitive Indoor Arena Matchplay Under Lights" loading="lazy">
-                <div class="gallery-caption">Competitive Indoor Arena Matchplay Under Lights</div>
+              <div class="gallery-card-img-wrap">
+                <img src="assets/images/badminton-match.jpg" alt="Competitive Indoor Arena Matchplay Under Lights" class="clickable-photo" data-caption="Competitive Indoor Arena Matchplay Under Lights" loading="lazy">
               </div>
+              <div class="gallery-caption">Competitive Indoor Arena Matchplay Under Lights</div>
+            </div>
             
           </div>
         </div>
@@ -470,5 +482,15 @@
 
   <script src="assets/js/sports-data.js"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Fullscreen Photo Lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Enlarged View" class="photo-lightbox-img" id="lightboxImg">
+      <div class="photo-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+  
 </body>
 </html>
