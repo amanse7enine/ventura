@@ -67,23 +67,23 @@ function generateSportPage(sport) {
   const athleticsTournamentCard = sport.id === 'athletics' ? `
             <div style="margin-top: 1.5rem; padding: 1.25rem; background: #ffffff; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border-light); border-radius: var(--radius-md);">
               <h4 style="color: #ef4444; display: flex; align-items: center; gap: 8px; margin: 0 0 0.5rem 0; font-size: 1.05rem;">
-                <span>⚡</span> Tug of War & Athletics Competition Structure
+                <span>⚡</span> Gym & Athletics Club • Competition Structure
               </h4>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Official 2-Pool Tug of War League & CRPF Ground Track Timings.
+                Organized by the Gym and Athletics Club, IIIT Vadodara • Official Track & Field and Tug of War Championships.
               </p>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
                 <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #ef4444;">
-                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Tug of War (5v5 - Best of 3)</strong>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• 2 Pools (Separate for Boys & Girls).<br>• 5 Players per team.<br>• Pool matches & Finals: <strong>Best of 3 pulls</strong>.</p>
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">1. Athletics (Track & Field)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Track: 100m, 200m, 4×100m Relay.<br>• Special Event: Hybrid Fitness Challenge.<br>• Venue: CRPF Ground (31 Oct & 01 Nov).<br>• Deadline: 22 Oct.</p>
                 </div>
                 <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #f97316;">
-                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Athletics (Best Timings)</strong>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Venue: CRPF Ground.<br>• Conducted in timing slots.<br>• Winner decided by top recorded timings.</p>
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">2. Tug of War (Power Clash)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Team Registrations: Squad sign-up.<br>• Solo Registrations: Powerhouse team allotment.<br>• Venue: Institute Premises (15 Oct – 01 Nov).<br>• Deadline: 18 Oct.</p>
                 </div>
                 <div style="background: var(--light-surface); padding: 1rem; border-radius: var(--radius-md); border-left: 3px solid #10b981;">
-                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Entry Fees & Playoff Path</strong>
-                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• ₹20/individual, ₹80/relay, ₹100/tug of war.<br>• Tug of War: Top 2 from each pool advance to SF (A1 vs B2, B1 vs A2).<br>• Sports outfit mandatory.</p>
+                  <strong style="color: var(--deep-navy); font-size: 0.88rem;">3. Awards & Rules</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin: 6px 0 0 0; line-height: 1.5;">• Medals, prizes & campus bragging rights.<br>• Best of 3 pulls in Tug of War matches.<br>• Sports outfit mandatory; spikes permitted on track.</p>
                 </div>
               </div>
             </div>
@@ -336,9 +336,14 @@ function generateSportPage(sport) {
         </div>
       </div>
       <div class="drawer-actions">
-        <a href="${sport.registrationLink}" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for ${sport.name}</a>
+        ${sport.registrationOptions && sport.registrationOptions.length > 0 ?
+          sport.registrationOptions.map(opt => `
+            <a href="${opt.link}" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 6px;">📝 ${opt.label}</a>
+          `).join('') :
+          `<a href="${sport.registrationLink}" target="_blank" class="btn btn-primary" style="width: 100%;">📝 Register for ${sport.name}</a>`
+        }
         ${sport.rulebookPdf && sport.rulebookPdf !== '#' ? `
-        <a href="${sport.rulebookPdf}" download="${sport.id}-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%;">📥 Download Rulebook</a>
+        <a href="${sport.rulebookPdf}" download="${sport.id}-rulebook.pdf" target="_blank" class="btn btn-secondary" style="width: 100%; margin-top: 6px;">📥 Download Rulebook</a>
         ` : ''}
       </div>
     </div>
